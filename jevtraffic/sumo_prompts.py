@@ -12,8 +12,10 @@ Questions:
 """
 from __future__ import annotations
 
+import re
+
 from .decider import Choice
-from .sumo_env import SITUATIONS, SumoObs
+from .sumo_env import COMPASS, SITUATIONS, SumoObs
 
 SYSTEM_PROMPT = "You are a traffic signal control agent. You make fast, decisive signal timing decisions."
 STEP_SECONDS = 5
@@ -128,3 +130,27 @@ def render_compact(obs: SumoObs, blocked: set[str] | frozenset = frozenset(), no
 
 
 STATE_FORMATS = {"full": render_state, "compact": render_compact}
+
+
+# ---------------------------------------------------------------- layout augmentation (v6)
+_COMPASS_RE = re.compile(r"\b(" + "|".join(COMPASS) + r")\b")
+
+
+def augment_switch(state: str, options: list[str], rng) -> tuple[str, list[str]]:
+    """Label-preserving layout augmentation of a keep/switch record: rotate every approach name by the same
+    random quarter turn (state and options alike) and shuffle the order of the movement lines. The keep/switch
+    decision depends on which movements each phase serves and their queues, not on compass names or the listing
+    order, so the teacher's label stays valid; the student cannot key on the layout of the training junctions."""
+    k = rng.randrange(4)
+    rot = {c: COMPASS[(i + k) % 4] for i, c in enumerate(COMPASS)}
+
+    def turn(text):
+        return _COMPASS_RE.sub(lambda m: rot[m.group(1)], text) if k else text
+
+    lines = state.split("\n")
+    idx = [i for i, l in enumerate(lines) if l.startswith("- ")]
+    moved = [lines[i] for i in idx]
+    rng.shuffle(moved)
+    for i, l in zip(idx, moved):
+        lines[i] = l
+    return turn("\n".join(lines)), [turn(o) for o in options]

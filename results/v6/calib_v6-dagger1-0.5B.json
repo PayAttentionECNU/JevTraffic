@@ -1,0 +1,112 @@
+{
+ "adapters": [
+  "ckpt/v6-dagger1-0.5B"
+ ],
+ "model": "/root/zzy/hf_models/Qwen2.5-0.5B-Instruct",
+ "state_field": "state",
+ "phase": 3.3201169227365472,
+ "phase_report": {
+  "fit": {
+   "T=1": {
+    "n": 2000,
+    "acc": 0.3485,
+    "nll": 1.3214,
+    "ece": 0.1395
+   },
+   "T=3.320": {
+    "n": 2000,
+    "acc": 0.3485,
+    "nll": 1.2171,
+    "ece": 0.0253
+   }
+  }
+ },
+ "situation": 1.1051709180756477,
+ "situation_report": {
+  "fit": {
+   "T=1": {
+    "n": 1338,
+    "acc": 0.8946,
+    "nll": 0.253,
+    "ece": 0.032
+   },
+   "T=1.105": {
+    "n": 1338,
+    "acc": 0.8946,
+    "nll": 0.2507,
+    "ece": 0.0302
+   }
+  }
+ },
+ "switch": 0.5488116360940264,
+ "switch_report": {
+  "fit": {
+   "T=1": {
+    "n": 2000,
+    "acc": 0.864,
+    "nll": 0.3872,
+    "ece": 0.1107
+   },
+   "T=0.549": {
+    "n": 2000,
+    "acc": 0.864,
+    "nll": 0.354,
+    "ece": 0.0541
+   }
+  },
+  "data/sumo_unitsa/test_junction/*.jsonl": {
+   "files": 30,
+   "T=1": {
+    "n": 2000,
+    "acc": 0.733,
+    "nll": 0.57,
+    "ece": 0.0438
+   },
+   "T=0.549": {
+    "n": 2000,
+    "acc": 0.733,
+    "nll": 0.6395,
+    "ece": 0.107
+   },
+   "per_class": {
+    "keep": {
+     "n": 984,
+     "precision": 0.698,
+     "recall": 0.807
+    },
+    "switch": {
+     "n": 1016,
+     "precision": 0.78,
+     "recall": 0.661
+    }
+   }
+  },
+  "data/sumo_unitsa/test_pattern/*.jsonl": {
+   "files": 18,
+   "T=1": {
+    "n": 2000,
+    "acc": 0.848,
+    "nll": 0.4179,
+    "ece": 0.1027
+   },
+   "T=0.549": {
+    "n": 2000,
+    "acc": 0.848,
+    "nll": 0.3995,
+    "ece": 0.0608
+   },
+   "per_class": {
+    "keep": {
+     "n": 1028,
+     "precision": 0.897,
+     "recall": 0.796
+    },
+    "switch": {
+     "n": 972,
+     "precision": 0.807,
+     "recall": 0.903
+    }
+   }
+  }
+ }
+}

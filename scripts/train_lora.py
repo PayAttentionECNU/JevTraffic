@@ -41,6 +41,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from jevtraffic.decider import Choice, build_prompt, load_model, single_token_ids  # noqa: E402
 from jevtraffic.env import PHASES  # noqa: E402
 from jevtraffic.prompts import PHASE_QUESTION, SYSTEM_PROMPT  # noqa: E402
+from jevtraffic.sumo_prompts import augment_switch  # noqa: E402
 
 
 def load_records(patterns, state_key, loss, min_gap, keep_idle, seed, kinds=None, state_field="state"):
@@ -77,15 +78,19 @@ def soft_target(costs, tau):
     return torch.softmax(-(c - c.min()) / (tau * span), dim=0)
 
 
-def make_batch(tokenizer, recs, rng, loss, tau):
-    """Prompts with a random option order per record, plus targets mapped into that order."""
+def make_batch(tokenizer, recs, rng, loss, tau, augment=0.0):
+    """Prompts with a random option order per record, plus targets mapped into that order. With `augment`,
+    that fraction of keep/switch records gets a random layout augmentation (sumo_prompts.augment_switch)."""
     prompts, targets, pairs = [], [], []
     for r in recs:
         if "options" in r:
-            order = list(range(len(r["options"])))
+            state, options = r["state"], r["options"]
+            if augment and r["kind"] == "switch" and rng.random() < augment:
+                state, options = augment_switch(state, options, rng)
+            order = list(range(len(options)))
             rng.shuffle(order)
-            q = Choice(r["question"], [r["options"][j] for j in order], r["kind"])
-            prompts.append(build_prompt(tokenizer, r["state"], q, SYSTEM_PROMPT))
+            q = Choice(r["question"], [options[j] for j in order], r["kind"])
+            prompts.append(build_prompt(tokenizer, state, q, SYSTEM_PROMPT))
             if loss == "soft":  # distribution over the shown letters (one-hot for records without probs)
                 probs = r.get("probs") or [float(j == r["label"]) for j in range(len(r["options"]))]
                 t = torch.zeros(5)
@@ -146,6 +151,8 @@ def main():
     p.add_argument("--save_every", type=int, default=200, help="optimizer steps between checkpoints (0 = only at end)")
     p.add_argument("--kinds", nargs="*", default=None, help="generic records: keep only these kinds (default all)")
     p.add_argument("--state_field", default="state", help="generic records: state / state_compact")
+    p.add_argument("--augment", type=float, default=0.0,
+                   help="fraction of keep/switch records with a random layout augmentation (v6)")
     args = p.parse_args()
 
     ddp = "LOCAL_RANK" in os.environ
@@ -205,7 +212,7 @@ def main():
             if micro >= n_micro:
                 break
             batch = recs[b * args.batch_size:(b + 1) * args.batch_size]
-            prompts, targets, pairs = make_batch(tokenizer, batch, batch_rng, args.loss, args.tau)
+            prompts, targets, pairs = make_batch(tokenizer, batch, batch_rng, args.loss, args.tau, args.augment)
             n_opts = [len(r["options"]) for r in batch] if generic else None
             logp = letter_logprobs(ddp_model, tokenizer, prompts, letter_ids, device, args.max_len, n_opts)
             if args.loss == "ce":

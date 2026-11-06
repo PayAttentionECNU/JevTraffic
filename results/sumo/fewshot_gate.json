@@ -218,34 +218,34 @@
    "use": "adapted"
   },
   "Jev (distilled + RL)|1|SouthKorea_Songdo": {
-   "adapted": 79.508,
-   "zero": 80.7,
+   "adapted": 57.725,
+   "zero": 58.391,
    "use": "adapted"
   },
   "Jev (distilled + RL) + event plan|1|SouthKorea_Songdo": {
-   "adapted": 79.508,
-   "zero": 80.7,
+   "adapted": 57.725,
+   "zero": 58.391,
    "use": "adapted"
   },
   "Jev (distilled + RL)|10|SouthKorea_Songdo": {
-   "adapted": 77.43,
-   "zero": 80.7,
-   "use": "adapted"
+   "adapted": 58.705,
+   "zero": 58.391,
+   "use": "zero"
   },
   "Jev (distilled + RL) + event plan|10|SouthKorea_Songdo": {
-   "adapted": 77.43,
-   "zero": 80.7,
-   "use": "adapted"
+   "adapted": 58.705,
+   "zero": 58.391,
+   "use": "zero"
   },
   "Jev (distilled + RL)|50|SouthKorea_Songdo": {
-   "adapted": 77.546,
-   "zero": 80.7,
-   "use": "adapted"
+   "adapted": 58.775,
+   "zero": 58.391,
+   "use": "zero"
   },
   "Jev (distilled + RL) + event plan|50|SouthKorea_Songdo": {
-   "adapted": 77.546,
-   "zero": 80.7,
-   "use": "adapted"
+   "adapted": 58.775,
+   "zero": 58.391,
+   "use": "zero"
   },
   "Jev (distilled + RL)|1|Hongkong_YMT": {
    "adapted": 39.122,

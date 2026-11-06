@@ -28,7 +28,11 @@ EVENTS = ["none", "event_1", "random"]
 BUDGETS = [0, 1, 10, 50]
 STUDENT = os.environ.get("STUDENT", "unitsa-jev-0.5B-full")  # the distilled student the Jev rows are built on
 RL = os.environ.get("RL", "rl5-0.5B-full")  # its RL adapter (scripts/select_rl_checkpoint.py); few-shot: RL-fs<N>_<J>
-_S, _R = re.escape(STUDENT), re.escape(RL)
+V6 = os.environ.get("V6", "v6-dagger2-0.5B")  # v6 student: DAgger + layout augmentation (scripts/v6_pipeline.sh)
+V6N = os.environ.get("V6N", "v6-dagger2-noaug-0.5B")  # the same DAgger data without augmentation (v6b)
+ABLATION = [("v3 distillation", STUDENT), ("+ augmentation", "v6-aug-0.5B"), ("+ augmentation + DAgger r1",
+            "v6-dagger1-0.5B"), ("+ augmentation + DAgger r2", V6), ("+ DAgger r1+r2, no augmentation", V6N)]
+_S, _R, _V, _VN = re.escape(STUDENT), re.escape(RL), re.escape(V6), re.escape(V6N)
 
 # (row name, regex on the run label; group "m" = model name for the learning methods)
 ROWS = [
@@ -42,6 +46,10 @@ ROWS = [
     ("UniTSA", r"^unitsa\[(?P<m>[^\]]+)\]$"),
     ("Jev (distilled)", rf"^jev-ns\[[^\]]*\+{_S}\]$"),
     ("Jev (distilled) + event plan", rf"^jev-ns-triggered-jev\[[^\]]*\+{_S}\]$"),
+    ("Jev (DAgger)", rf"^jev-ns\[[^\]]*\+{_VN}\]$"),
+    ("Jev (DAgger) + event plan", rf"^jev-ns-triggered-jev\[[^\]]*\+{_VN}\]$"),
+    ("Jev (DAgger + aug)", rf"^jev-ns\[[^\]]*\+{_V}\]$"),
+    ("Jev (DAgger + aug) + event plan", rf"^jev-ns-triggered-jev\[[^\]]*\+{_V}\]$"),
     ("Jev (distilled + RL)", rf"^jev-ns\[[^\]]*\+{_S}\+{_R}(?:\+(?P<m>{_R}-fs\d+_\w+))?\]$"),
     ("Jev (distilled + RL) + event plan",
      rf"^jev-ns-triggered-jev\[[^\]]*\+{_S}\+{_R}(?:\+(?P<m>{_R}-fs\d+_\w+))?\]$"),
@@ -150,6 +158,19 @@ def main():
         out += ["", "Adapted models kept by the gate (of the held-out junctions): "
                 + "; ".join(f"{n} {b} eps {k}/{t}" for (n, b), (k, t) in sorted(kept.items())
                             if "event plan" not in n)]
+    abl = defaultdict(list)  # (student, group) -> ATT, plain Jev without events
+    for r in runs:
+        if r["events"] != "none" or not r["metrics"].get("ATT"):
+            continue
+        for _, a in ABLATION:
+            if re.match(rf"^jev-ns\[[^\]]*\+{re.escape(a)}\]$", r["agent"]):
+                abl[(a, group(r))].append(r["metrics"]["ATT"])
+    if any(abl[(a, g)] for _, a in ABLATION[1:] for g in GROUPS):
+        out += ["", "## Ablation: student distillation (plain Jev, no events, 3 seeds)", "",
+                "| student | " + " | ".join(GROUPS) + " | runs |", "|---|" + "---|" * (len(GROUPS) + 1)]
+        for name, a in ABLATION:
+            out.append(f"| {name} | " + " | ".join(fmt(mean(abl[(a, g)])) for g in GROUPS)
+                       + f" | {sum(len(abl[(a, g)]) for g in GROUPS)} |")
     path = os.path.join(ROOT, "results", "sumo", "main_tables.md")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w").write("\n".join(out) + "\n")

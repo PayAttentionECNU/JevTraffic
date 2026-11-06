@@ -176,3 +176,44 @@ def test_main_tables_applies_fewshot_gate(tmp_path, monkeypatch):
     raw = text.split("raw adapted models)")[1]
     assert "| UniTSA | 50.0 | - | 50.0 | - |" in gated and "| UniTSA | 50.0 | - | 60.0 | - |" in raw
     assert "UniTSA 10 eps 0/1" in text
+
+
+def test_augment_switch_rotates_names_and_shuffles_lines(monkeypatch):
+    import random
+
+    pytest.importorskip("gymnasium")
+    from jevtraffic import sumo_prompts as sp
+
+    state = ("Intersection with 2 signal phases, time 5 s.\nCurrent green: north through (for 5 s).\n"
+             "Incoming movements (...):\n- north through: stopped 3\n- east left: stopped 1\n- north-2 right: stopped 0"
+             "\nV2X: ambulance on east left, 20 m from the stop line.")
+    opts = ["keep: north through", "switch to: east left"]
+    seen_rot, seen_order = set(), set()
+    for seed in range(40):
+        s, o = sp.augment_switch(state, opts, random.Random(seed))
+        lines = s.split("\n")
+        moves = [l for l in lines if l.startswith("- ")]
+        assert len(moves) == 3 and lines[:3][0] == state.split("\n")[0]
+        # the same quarter turn everywhere: the option for the current green names the movement in line 2
+        cur = lines[1].split(": ")[1].split(" (")[0]
+        assert o[0] == f"keep: {cur}" and cur.endswith("through")
+        assert o[1].split(": ")[1] in lines[-1]  # V2X line rotated with the options
+        assert sorted(m.split(":")[1] for m in moves) == [" stopped 0", " stopped 1", " stopped 3"]
+        seen_rot.add(cur)
+        seen_order.add(tuple(m.split(":")[1] for m in moves))
+    assert len(seen_rot) == 4 and len(seen_order) > 1
+
+
+def test_compass_names_rotate_only_when_bins_collide():
+    from jevtraffic.sumo_env import compass_names
+
+    songdo = {"a": 48.2, "b": 116.6, "c": 299.3, "d": 227.9}  # rotated ~45 degrees
+    n = compass_names(songdo)
+    assert sorted(n.values()) == ["east", "north", "south", "west"]
+    assert n["a"] == "east" and n["b"] == "north" and n["d"] == "west" and n["c"] == "south"
+    ymt = {"a": 187.7, "b": 7.8, "c": 279.4, "d": 99.6}  # already distinct: unchanged plain binning
+    assert compass_names(ymt) == {"a": "west", "b": "east", "c": "south", "d": "north"}
+    massy = {"a": 296.8, "b": 207.3, "c": 117.1}
+    assert compass_names(massy) == {"a": "south", "b": "west", "c": "north"}
+    five = {"a": 0, "b": 70, "c": 140, "d": 210, "e": 280}  # more approaches than names: suffixes
+    assert len(set(compass_names(five).values())) == 5

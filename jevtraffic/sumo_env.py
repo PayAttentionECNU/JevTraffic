@@ -60,10 +60,35 @@ def _quiet_loguru():
     logger.add(sys.stderr, level=os.environ.get("JEV_SUMO_LOG", "WARNING"))
 
 
+def approach_angle(vec) -> float:
+    """Bearing (deg, counter-clockwise from east) of where traffic comes from, given a lane heading vector
+    (direction of travel): traffic heading north comes *from* the south."""
+    return math.degrees(math.atan2(-vec[1], -vec[0])) % 360
+
+
 def compass_from(vec) -> str:
-    """Approach name from a lane heading vector (direction of travel): traffic heading north comes *from* the south."""
-    ang = math.degrees(math.atan2(-vec[1], -vec[0])) % 360
-    return COMPASS[int(((ang + 45) % 360) // 90)]
+    return COMPASS[int(((approach_angle(vec) + 45) % 360) // 90)]
+
+
+def compass_names(angles: dict[str, float]) -> dict[str, str]:
+    """Compass name per approach (edge -> bearing). The 90-degree bins are rotated by the smallest angle that gives
+    every approach its own name; junctions whose approaches already fall into distinct bins keep the plain
+    binning (rotation 0). Songdo is rotated ~45 degrees: plain binning named its four approaches north, north-2,
+    south, south-2. With more than four approaches (or no rotation that separates them) duplicates get a suffix."""
+    def binned(rot):
+        return {e: COMPASS[int(((a - rot + 45) % 360) // 90)] for e, a in angles.items()}
+
+    if len(angles) <= len(COMPASS):
+        for d in range(46):
+            for rot in ((d,) if d == 0 else (d, -d)):
+                names = binned(rot)
+                if len(set(names.values())) == len(names):
+                    return names
+    names, used = {}, {}
+    for e, base in sorted(binned(0).items()):
+        used[base] = used.get(base, 0) + 1
+        names[e] = base if used[base] == 1 else f"{base}-{used[base]}"
+    return names
 
 
 @dataclass
@@ -297,18 +322,13 @@ class SumoTSCEnv:
     # ------------------------------------------------------------------ observation
     def _build_layout(self, raw):
         mv = raw["tls_dynamic_features_seq"][-1]
-        heading = {}
+        angles = {}
         for m in mv:
             for lid in m["incoming_lane_ids"]:
                 if lid in self._static:
-                    heading[m["from_edge"]] = compass_from(self._static[lid]["heading"])
+                    angles[m["from_edge"]] = approach_angle(self._static[lid]["heading"])
                     break
-        names, used = {}, {}
-        for edge in sorted(heading):
-            base = heading[edge]
-            used[base] = used.get(base, 0) + 1
-            names[edge] = base if used[base] == 1 else f"{base}-{used[base]}"
-        self._approach = names
+        self._approach = compass_names(angles)
         self._phase_movements = [[i for i, m in enumerate(mv) if p in m["phase_indices"]]
                                  for p in range(self._num_phases)]
 
