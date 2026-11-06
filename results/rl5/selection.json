@@ -1,0 +1,103 @@
+{
+ "selected": "ckpt/rl5-0.5B-fulla/update75",
+ "val_envs": [
+  "easy_high_density",
+  "normal_high_density",
+  "easy_fluctuating_commuter",
+  "normal_increasing_demand"
+ ],
+ "val_seed": 100,
+ "junctions": [
+  "Beijing_Beihuan",
+  "Beijing_Beishahe",
+  "Beijing_Changjianglu",
+  "Beijing_Gaojiaoyuan",
+  "Beijing_Pinganli",
+  "Beijing_Yongrunlu",
+  "Chengdu_Chenghannanlu",
+  "Chengdu_Guanghua",
+  "Tianjin_zhijingdao"
+ ],
+ "scores": {
+  "ckpt/rl5-0.5B-fulla/update0": {
+   "ATT": 40.418,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update15": {
+   "ATT": 39.951,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update30": {
+   "ATT": 39.543,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update45": {
+   "ATT": 41.141,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update60": {
+   "ATT": 39.447,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update75": {
+   "ATT": 39.322,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update90": {
+   "ATT": 39.735,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update105": {
+   "ATT": 40.025,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla/update120": {
+   "ATT": 41.43,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fulla": {
+   "ATT": 39.907,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update0": {
+   "ATT": 40.418,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update15": {
+   "ATT": 39.837,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update30": {
+   "ATT": 39.751,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update45": {
+   "ATT": 40.391,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update60": {
+   "ATT": 39.586,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update75": {
+   "ATT": 39.962,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update90": {
+   "ATT": 39.699,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update105": {
+   "ATT": 40.512,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb/update120": {
+   "ATT": 40.452,
+   "episodes": 36
+  },
+  "ckpt/rl5-0.5B-fullb": {
+   "ATT": 39.525,
+   "episodes": 36
+  }
+ }
+}

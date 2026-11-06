@@ -1,0 +1,281 @@
+{
+ "val_envs": [
+  "easy_high_density",
+  "normal_high_density",
+  "easy_fluctuating_commuter",
+  "normal_increasing_demand"
+ ],
+ "val_seed": 100,
+ "gate": {
+  "PressLight|1|France_Massy": {
+   "adapted": 98.631,
+   "zero": 99.249,
+   "use": "adapted"
+  },
+  "PressLight|10|France_Massy": {
+   "adapted": 63.056,
+   "zero": 99.249,
+   "use": "adapted"
+  },
+  "PressLight|50|France_Massy": {
+   "adapted": 61.362,
+   "zero": 99.249,
+   "use": "adapted"
+  },
+  "PressLight|1|SouthKorea_Songdo": {
+   "adapted": 100.438,
+   "zero": 204.879,
+   "use": "adapted"
+  },
+  "PressLight|10|SouthKorea_Songdo": {
+   "adapted": 104.037,
+   "zero": 204.879,
+   "use": "adapted"
+  },
+  "PressLight|50|SouthKorea_Songdo": {
+   "adapted": 102.79,
+   "zero": 204.879,
+   "use": "adapted"
+  },
+  "PressLight|1|Hongkong_YMT": {
+   "adapted": 51.602,
+   "zero": 65.67,
+   "use": "adapted"
+  },
+  "PressLight|10|Hongkong_YMT": {
+   "adapted": 57.903,
+   "zero": 65.67,
+   "use": "adapted"
+  },
+  "PressLight|50|Hongkong_YMT": {
+   "adapted": 55.716,
+   "zero": 65.67,
+   "use": "adapted"
+  },
+  "AttendLight|1|France_Massy": {
+   "adapted": 54.855,
+   "zero": 57.818,
+   "use": "adapted"
+  },
+  "AttendLight|10|France_Massy": {
+   "adapted": 55.476,
+   "zero": 57.818,
+   "use": "adapted"
+  },
+  "AttendLight|50|France_Massy": {
+   "adapted": 60.414,
+   "zero": 57.818,
+   "use": "zero"
+  },
+  "AttendLight|1|SouthKorea_Songdo": {
+   "adapted": 96.531,
+   "zero": 103.987,
+   "use": "adapted"
+  },
+  "AttendLight|10|SouthKorea_Songdo": {
+   "adapted": 120.788,
+   "zero": 103.987,
+   "use": "zero"
+  },
+  "AttendLight|50|SouthKorea_Songdo": {
+   "adapted": 266.811,
+   "zero": 103.987,
+   "use": "zero"
+  },
+  "AttendLight|1|Hongkong_YMT": {
+   "adapted": 50.042,
+   "zero": 51.869,
+   "use": "adapted"
+  },
+  "AttendLight|10|Hongkong_YMT": {
+   "adapted": 50.748,
+   "zero": 51.869,
+   "use": "adapted"
+  },
+  "AttendLight|50|Hongkong_YMT": {
+   "adapted": 66.558,
+   "zero": 51.869,
+   "use": "zero"
+  },
+  "IntelliLight|1|France_Massy": {
+   "adapted": 63.579,
+   "zero": 72.053,
+   "use": "adapted"
+  },
+  "IntelliLight|10|France_Massy": {
+   "adapted": 62.962,
+   "zero": 72.053,
+   "use": "adapted"
+  },
+  "IntelliLight|50|France_Massy": {
+   "adapted": 74.211,
+   "zero": 72.053,
+   "use": "zero"
+  },
+  "IntelliLight|1|SouthKorea_Songdo": {
+   "adapted": 96.136,
+   "zero": 137.636,
+   "use": "adapted"
+  },
+  "IntelliLight|10|SouthKorea_Songdo": {
+   "adapted": 88.808,
+   "zero": 137.636,
+   "use": "adapted"
+  },
+  "IntelliLight|50|SouthKorea_Songdo": {
+   "adapted": 79.485,
+   "zero": 137.636,
+   "use": "adapted"
+  },
+  "IntelliLight|1|Hongkong_YMT": {
+   "adapted": 70.443,
+   "zero": 59.369,
+   "use": "zero"
+  },
+  "IntelliLight|10|Hongkong_YMT": {
+   "adapted": 47.245,
+   "zero": 59.369,
+   "use": "adapted"
+  },
+  "IntelliLight|50|Hongkong_YMT": {
+   "adapted": 79.922,
+   "zero": 59.369,
+   "use": "zero"
+  },
+  "UniTSA|1|France_Massy": {
+   "adapted": 55.207,
+   "zero": 55.757,
+   "use": "adapted"
+  },
+  "UniTSA|10|France_Massy": {
+   "adapted": 55.892,
+   "zero": 55.757,
+   "use": "zero"
+  },
+  "UniTSA|50|France_Massy": {
+   "adapted": 55.8,
+   "zero": 55.757,
+   "use": "zero"
+  },
+  "UniTSA|1|SouthKorea_Songdo": {
+   "adapted": 59.564,
+   "zero": 59.564,
+   "use": "zero"
+  },
+  "UniTSA|10|SouthKorea_Songdo": {
+   "adapted": 59.935,
+   "zero": 59.564,
+   "use": "zero"
+  },
+  "UniTSA|50|SouthKorea_Songdo": {
+   "adapted": 58.843,
+   "zero": 59.564,
+   "use": "adapted"
+  },
+  "UniTSA|1|Hongkong_YMT": {
+   "adapted": 49.005,
+   "zero": 49.005,
+   "use": "zero"
+  },
+  "UniTSA|10|Hongkong_YMT": {
+   "adapted": 49.115,
+   "zero": 49.005,
+   "use": "zero"
+  },
+  "UniTSA|50|Hongkong_YMT": {
+   "adapted": 48.072,
+   "zero": 49.005,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|1|France_Massy": {
+   "adapted": 55.667,
+   "zero": 55.651,
+   "use": "zero"
+  },
+  "Jev (distilled + RL) + event plan|1|France_Massy": {
+   "adapted": 55.667,
+   "zero": 55.651,
+   "use": "zero"
+  },
+  "Jev (distilled + RL)|10|France_Massy": {
+   "adapted": 55.388,
+   "zero": 55.651,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|10|France_Massy": {
+   "adapted": 55.388,
+   "zero": 55.651,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|50|France_Massy": {
+   "adapted": 55.365,
+   "zero": 55.651,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|50|France_Massy": {
+   "adapted": 55.365,
+   "zero": 55.651,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|1|SouthKorea_Songdo": {
+   "adapted": 79.508,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|1|SouthKorea_Songdo": {
+   "adapted": 79.508,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|10|SouthKorea_Songdo": {
+   "adapted": 77.43,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|10|SouthKorea_Songdo": {
+   "adapted": 77.43,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|50|SouthKorea_Songdo": {
+   "adapted": 77.546,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|50|SouthKorea_Songdo": {
+   "adapted": 77.546,
+   "zero": 80.7,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL)|1|Hongkong_YMT": {
+   "adapted": 39.122,
+   "zero": 38.806,
+   "use": "zero"
+  },
+  "Jev (distilled + RL) + event plan|1|Hongkong_YMT": {
+   "adapted": 39.122,
+   "zero": 38.806,
+   "use": "zero"
+  },
+  "Jev (distilled + RL)|10|Hongkong_YMT": {
+   "adapted": 38.839,
+   "zero": 38.806,
+   "use": "zero"
+  },
+  "Jev (distilled + RL) + event plan|10|Hongkong_YMT": {
+   "adapted": 38.839,
+   "zero": 38.806,
+   "use": "zero"
+  },
+  "Jev (distilled + RL)|50|Hongkong_YMT": {
+   "adapted": 38.803,
+   "zero": 38.806,
+   "use": "adapted"
+  },
+  "Jev (distilled + RL) + event plan|50|Hongkong_YMT": {
+   "adapted": 38.803,
+   "zero": 38.806,
+   "use": "adapted"
+  }
+ }
+}

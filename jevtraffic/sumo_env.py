@@ -226,6 +226,11 @@ class SumoTSCEnv:
 
     # ------------------------------------------------------------------ simulation
     @property
+    def incoming_lanes(self) -> list[str]:
+        """Lanes approaching the junction (io_type incoming), set at reset."""
+        return list(self._lane_phases)
+
+    @property
     def conn(self):
         e = self.base
         while not hasattr(e, "tsc_env"):

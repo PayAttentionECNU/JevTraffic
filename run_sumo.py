@@ -25,11 +25,14 @@ import time
 from jevtraffic.sumo_env import SumoTSCEnv, random_events
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+RL_BASELINES = ("presslight", "attendlight", "intellilight")  # jevtraffic/rl_baselines.py
 
 
 def run_label(args) -> str:
     if args.agent == "unitsa":
         return f"unitsa[{os.path.basename(os.path.dirname(os.path.abspath(args.unitsa_model)))}]"
+    if args.agent in RL_BASELINES:
+        return f"{args.agent}[{os.path.basename(os.path.dirname(os.path.abspath(args.rl_model)))}]"
     if args.agent not in ("mp", "jev"):
         return args.agent
     label = args.agent
@@ -48,21 +51,24 @@ def run_label(args) -> str:
 
 
 def load_temperatures(adapters) -> dict:
-    if not adapters:
-        return {}
-    path = os.path.join(adapters[-1], "calib.json")
-    if not os.path.exists(path):
-        return {}
-    d = json.load(open(path))
-    return {k: d[k] for k in ("phase", "situation", "switch") if k in d}
+    """calib.json of the last adapter that has one (an RL adapter on top of a distilled one keeps its temperatures)."""
+    for a in reversed(adapters or []):
+        path = os.path.join(a, "calib.json")
+        if os.path.exists(path):
+            d = json.load(open(path))
+            return {k: d[k] for k in ("phase", "situation", "switch") if k in d}
+    return {}
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--junction", required=True)
     p.add_argument("--env_name", nargs="+", required=True, help="one or more envs of this junction")
-    p.add_argument("--agent", default="mp", choices=["fixtime", "webster", "sotl", "maxpressure", "mp", "jev", "unitsa"])
+    p.add_argument("--agent", default="mp",
+                   choices=["fixtime", "webster", "sotl", "maxpressure", "mp", "jev", "unitsa", *RL_BASELINES])
     p.add_argument("--unitsa_model", default=None, help="UniTSA model.zip (scripts/train_unitsa.py)")
+    p.add_argument("--rl_model", default=None, help="PressLight / AttendLight / IntelliLight model.zip "
+                                                    "(scripts/train_rl_baseline.py)")
     p.add_argument("--action_type", default="choose_next_phase", choices=["choose_next_phase", "next_or_not"],
                    help="mp/jev: phase choice (v2) or keep/switch (v3); unitsa always uses next_or_not")
     p.add_argument("--state_format", default="full", choices=["full", "compact"])
@@ -139,6 +145,10 @@ def run_one(args, decider):
         from jevtraffic.unitsa import UniTSAAgent
 
         agent = UniTSAAgent(env, args.unitsa_model)
+    elif args.agent in RL_BASELINES:
+        from jevtraffic.rl_baselines import RLBaselineAgent
+
+        agent = RLBaselineAgent(env, args.agent, args.rl_model)
     else:
         from jevtraffic.sumo_agents import BenchmarkAgent
 

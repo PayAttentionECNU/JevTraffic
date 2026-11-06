@@ -72,6 +72,34 @@ def train_env(junction: str, net: str, patterns: list[str], seed: int, log_file:
     return _init
 
 
+class UniTSAState:
+    """The benchmark's UniTSA observation of `SumoTSCEnv(action_type="next_or_not")`, rebuilt from the env's raw
+    TSCInfoWrapper output, with NextOrNotWrapper's green timer. Call `update()` exactly once per env step."""
+
+    def __init__(self, env, shape, max_green: int = MAX_GREEN):
+        assert env.action_type == "next_or_not"
+        self.env, self.shape, self.max_green = env, tuple(shape), max_green
+        self._phase = None
+        self.green = 0
+        self._last_t = 0
+
+    def update(self) -> np.ndarray:
+        from tsc_algos.rl.unitsa.unitsa_env.state_funcs import movement_sequence_state
+
+        raw, info = self.env.raw, self.env.info
+        frames = raw["tls_dynamic_features_seq"]
+        phase = frames[-1][0].get("this_phase_index") if frames and frames[-1] else None
+        t = int(info.get("step_time", self._last_t))
+        if self.env.steps == 0 or self._phase is None or phase != self._phase:  # reset / phase change
+            self.green = 0  # (NextOrNotWrapper._update_green_time; at reset as NextOrNotWrapper.reset)
+        else:
+            self.green += max(t - self._last_t, 0)
+        self._phase, self._last_t = phase, t
+        state = movement_sequence_state(frames, self.env.cfg["num_phases"], history_len=self.shape[0],
+                                        current_green_time=self.green, max_green=self.max_green)
+        return fit_shape(state.astype(np.float32), self.shape)
+
+
 class UniTSAAgent:
     """A trained UniTSA policy driving `SumoTSCEnv(action_type="next_or_not")` (1 keep, 0 switch)."""
 
@@ -79,49 +107,23 @@ class UniTSAAgent:
         import torch
         from stable_baselines3 import PPO
 
-        assert env.action_type == "next_or_not"
         torch.set_num_threads(1)  # one decision of a 0.3M-parameter net; threads only add overhead
         self.env, self.max_green = env, max_green
         self.model = PPO.load(model_path, device=device)
-        self.shape = self.model.observation_space.shape
-        self._phase = None
-        self._green = 0
-        self._last_t = 0
+        self.state = UniTSAState(env, self.model.observation_space.shape, max_green)
         self.forced = 0
         self.calls, self.seconds = 0, 0.0
 
-    def _update_green(self, raw, info):  # NextOrNotWrapper._update_green_time
-        frames = raw["tls_dynamic_features_seq"]
-        phase = frames[-1][0].get("this_phase_index") if frames and frames[-1] else None
-        t = int(info.get("step_time", self._last_t))
-        if self._phase is None or phase != self._phase:
-            self._green = 0
-        else:
-            self._green += max(t - self._last_t, 0)
-        self._phase, self._last_t = phase, t
-
     def act(self, obs) -> int:
-        from tsc_algos.rl.unitsa.unitsa_env.state_funcs import movement_sequence_state
-
-        t0 = time.perf_counter()
-        raw = self.env.raw
-        if self.env.steps == 0 and self._phase is None:  # reset: as NextOrNotWrapper.reset
-            frames = raw["tls_dynamic_features_seq"]
-            self._phase = frames[-1][0].get("this_phase_index") if frames and frames[-1] else None
-            self._green, self._last_t = 0, int(self.env.info.get("step_time", 0))
-        else:
-            self._update_green(raw, self.env.info)
-        state = movement_sequence_state(raw["tls_dynamic_features_seq"], self.env.cfg["num_phases"],
-                                        history_len=self.shape[0], current_green_time=self._green,
-                                        max_green=self.max_green).astype(np.float32)
         import torch
 
-        obs_t, _ = self.model.policy.obs_to_tensor(fit_shape(state, self.shape))
+        t0 = time.perf_counter()
+        obs_t, _ = self.model.policy.obs_to_tensor(self.state.update())
         with torch.no_grad():
             probs = self.model.policy.get_distribution(obs_t).distribution.probs[0].tolist()
         self.last_probs = probs  # by env action: [switch, keep]; deterministic predict() is the argmax
         action = int(np.argmax(probs))
-        if self.max_green > 0 and action == 1 and self._green >= self.max_green:
+        if self.max_green > 0 and action == 1 and self.state.green >= self.max_green:
             action, self.forced = 0, self.forced + 1
         self.calls += 1
         self.seconds += time.perf_counter() - t0

@@ -18,7 +18,7 @@ SLOTS=${SLOTS:-2}
 SEED=${SEED:-0}
 EXTRA=${EXTRA:-}
 MODE=${1:-e2}
-J="Beijing_Beihuan Beijing_Beishahe Beijing_Changjianglu Beijing_Gaojiaoyuan Beijing_Pinganli Beijing_Yongrunlu Chengdu_Chenghannanlu Chengdu_Guanghua Tianjin_zhijingdao France_Massy SouthKorea_Songdo Hongkong_YMT"
+J=${JUNCTIONS:-"Beijing_Beihuan Beijing_Beishahe Beijing_Changjianglu Beijing_Gaojiaoyuan Beijing_Pinganli Beijing_Yongrunlu Chengdu_Chenghannanlu Chengdu_Guanghua Tianjin_zhijingdao France_Massy SouthKorea_Songdo Hongkong_YMT"}
 ENVS=""; for net in easy normal; do for pat in low_density high_density fluctuating_commuter increasing_demand random_perturbation; do ENVS="$ENVS ${net}_$pat"; done; done
 mkdir -p logs/sumo_jev
 case $MODE in
@@ -38,7 +38,7 @@ for s in $(seq 0 $((nslots - 1))); do
       set -- ${jobs[$k]}
       j=$1; ev=$2
       tag=$(for a in $ADAPTERS; do basename "$a"; done | paste -sd+)
-      log=logs/sumo_jev/${MODE}_${tag:-base}_${j}_${ev/:/}.log
+      log=logs/sumo_jev/${MODE}_${tag:-base}_${j}_${ev/:/}_s$SEED.log
       CUDA_VISIBLE_DEVICES=$gpu .venv/bin/python run_sumo.py --junction "$j" --env_name $ENVS --events "$ev" \
         --variants $VARIANTS --model "$MODEL" ${ADAPTERS:+--adapters $ADAPTERS} --seed "$SEED" $EXTRA --skip_existing \
         > "$log" 2>&1 && echo "done $MODE $tag $j $ev" || echo "FAILED $MODE $tag $j $ev ($log)"
