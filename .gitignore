@@ -11,3 +11,8 @@ results/smoke/
 results/sumo/runs/
 results/sumo/events/
 .pytest_cache/
+results/events/
+results/sumo/runs_v4/
+results/sumo/runs_badnames/
+results/sumo/val_fs/
+results/sumo/val_rl/
