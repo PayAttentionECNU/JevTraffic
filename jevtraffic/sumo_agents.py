@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import time
 
+from .case_memory import CaseMemory
 from .events import EventManager, Notifier, rule_situation
 from .memory import ContextAgent, TriggerConfig
 from .sumo_env import SITUATIONS, SumoObs, SumoTSCEnv
@@ -60,7 +61,7 @@ class Controller:
     def __init__(self, env: SumoTSCEnv, base: str = "jev", decider=None, memory: str = "none",
                  detector: str = "none", notify_path: str | None = None, tau_event: float = 0.5,
                  trigger_config: TriggerConfig | None = None, log_steps: bool = True, record_states: bool = False,
-                 state_format: str = "full", teacher=None):
+                 state_format: str = "full", teacher=None, case_memory: CaseMemory | None = None):
         assert base in ("jev", "mp") and detector in ("none", "rule", "jev")
         assert base == "mp" or decider is not None
         assert detector != "jev" or decider is not None
@@ -73,16 +74,17 @@ class Controller:
         self.render = STATE_FORMATS[state_format]
         self.switch_mode = env.action_type == "next_or_not"
         self.teacher = teacher
+        self.case_memory = case_memory
         self.steps: list[dict] = []
         self.timing = {"phase_calls": 0, "phase_s": 0.0, "situation_calls": 0, "situation_s": 0.0, "skipped": 0}
 
     # ---------------------------------------------------------------- situation
-    def _situation(self, obs: SumoObs, triggers) -> tuple[str, float, list[float] | None]:
+    def _situation(self, obs: SumoObs, triggers, note: str) -> tuple[str, float, list[float] | None]:
         if self.detector == "rule":
             label, conf = rule_situation(obs, triggers)
             return label, conf, None
         t0 = time.time()
-        d = self.decider.decide(situation_state(obs, self.context.memory.items()), SITUATION_QUESTION)
+        d = self.decider.decide(situation_state(obs, self.context.memory.items()) + note, SITUATION_QUESTION)
         self.timing["situation_calls"] += 1
         self.timing["situation_s"] += time.time() - t0
         return SITUATIONS[d.index], d.confidence, d.probabilities
@@ -91,13 +93,19 @@ class Controller:
     def act(self, obs: SumoObs) -> int:
         self.context.observe(obs)
         rec = {"t": obs.time, "allowed": list(obs.allowed), "mp": mp_action(obs)}
+        note = ""
+        if self.case_memory:
+            match = self.case_memory.retrieve(obs, self.switch_mode)
+            if match:
+                note = "\n" + self.case_memory.render(match)
+                rec["case_match"] = match
         if self.switch_mode:  # MaxPressure's choice as keep (1) / switch (0)
             rec["mp"] = int(rec["mp"] == obs.current_phase)
         if self.events:
             self.events.update(obs)
             triggers = self.context.triggers(obs)
             if triggers:
-                label, conf, probs = self._situation(obs, triggers)
+                label, conf, probs = self._situation(obs, triggers, note)
                 self.events.on_situation(obs, triggers, label, conf, self.detector)
                 rec.update(triggers=[t.kind for t in triggers], situation=label, situation_conf=round(conf, 3),
                            situation_probs=probs and [round(p, 4) for p in probs])
@@ -107,9 +115,9 @@ class Controller:
         blocked = self.events.blocked_lanes() if self.events else set()
         action = self.events.override(obs) if self.events else None
         if self.switch_mode:
-            action = self._act_switch(obs, rec, blocked, action)
+            action = self._act_switch(obs, rec, blocked, action, note)
         else:
-            action = self._act_phase(obs, rec, blocked, action)
+            action = self._act_phase(obs, rec, blocked, action, note)
         rec["action"] = action
         if blocked:
             rec["blocked"] = sorted(blocked)
@@ -124,7 +132,7 @@ class Controller:
         self.timing["phase_s"] += time.time() - t0
         return d
 
-    def _act_switch(self, obs: SumoObs, rec: dict, blocked, target) -> int:
+    def _act_switch(self, obs: SumoObs, rec: dict, blocked, target, note: str) -> int:
         """next_or_not: 1 keep, 0 switch to the next phase."""
         conf = None
         if target is not None:  # event plan: keep while its phase is green, otherwise cycle towards it
@@ -138,7 +146,7 @@ class Controller:
         else:
             q = switch_question(obs)
             state = self.render(obs, blocked)
-            d = self._decide(state, q)
+            d = self._decide(state + note, q)
             action, conf = option_to_action(d.index), d.confidence
             rec["probs"] = [round(p, 4) for p in d.probabilities]
             rec["conf"] = round(conf, 4)
@@ -147,7 +155,7 @@ class Controller:
         self.context.memory.set_confidence(conf)
         return action
 
-    def _act_phase(self, obs: SumoObs, rec: dict, blocked, action) -> int:
+    def _act_phase(self, obs: SumoObs, rec: dict, blocked, action, note: str) -> int:
         conf = None
         if action is not None:
             rec["preempt"] = True
@@ -159,7 +167,7 @@ class Controller:
         else:
             q, phases = phase_question(obs)
             state = self.render(obs, blocked)
-            d = self._decide(state, q)
+            d = self._decide(state + note, q)
             action, conf = phases[d.index], d.confidence
             rec["probs"] = [round(p, 4) for p in d.probabilities]
             rec["conf"] = round(conf, 4)
@@ -173,6 +181,8 @@ class Controller:
         decided = [s for s in self.steps if "probs" in s]
         out = {"context": self.context.summary(), "timing": dict(self.timing),
                "events": self.events.stats if self.events else {}, "notifications": len(self.notifier.events)}
+        if self.case_memory:
+            out["case_memory"] = self.case_memory.summary()
         if decided:
             out["agree_mp"] = round(sum(s["action"] == s["mp"] for s in decided) / len(decided), 4)
             out["mean_conf"] = round(sum(s["conf"] for s in decided) / len(decided), 4)

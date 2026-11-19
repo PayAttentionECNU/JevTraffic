@@ -69,6 +69,10 @@ the random_perturbation pattern held out.
 
 Results: [results/RESULTS_v2_v3.md](results/RESULTS_v2_v3.md).
 
+SUMO controllers can also retrieve earlier local observations by traffic situation, load, movement and time window.
+Enable it with `--case_mode` in `run_sumo.py` or `scripts/run_days.py`.
+The [case memory guide](docs/分层情景记忆.md) describes collection, read-only evaluation and the reported metrics.
+
 ## Layout
 
 ```

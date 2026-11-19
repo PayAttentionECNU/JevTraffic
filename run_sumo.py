@@ -23,6 +23,7 @@ import sys
 import time
 
 from jevtraffic.sumo_env import SumoTSCEnv, random_events
+from jevtraffic.case_memory import CaseMemory
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 RL_BASELINES = ("presslight", "attendlight", "intellilight")  # jevtraffic/rl_baselines.py
@@ -42,6 +43,8 @@ def run_label(args) -> str:
         label += f"-{args.state_format}"
     if args.detector != "none":
         label += f"-{args.memory}-{args.detector}"
+    if args.case_mode != "off":
+        label += f"-cases-{args.case_mode}-d{args.case_day}"
     if args.agent == "jev" or args.detector == "jev":
         tag = "+".join(os.path.basename(a.rstrip("/")) for a in args.adapters) or os.path.basename(args.model)
         if args.adapters and "7B" not in args.model:
@@ -76,6 +79,10 @@ def main():
     p.add_argument("--prefix_cache", action="store_true", help="reuse the KV cache of the fixed prompt prefix")
     p.add_argument("--compile", action="store_true", help="CUDA-graph the forward pass (torch.compile)")
     p.add_argument("--memory", default="triggered", choices=["none", "always", "triggered"])
+    p.add_argument("--case_mode", default="off", choices=["off", "collect", "read", "online"])
+    p.add_argument("--case_store", default=os.path.join(ROOT, "records", "cases"),
+                   help="local history archive; use separate roots for independent experiments")
+    p.add_argument("--case_day", type=int, help="chronological episode index for case memory, starting at 0")
     p.add_argument("--detector", default="none", choices=["none", "rule", "jev"])
     p.add_argument("--variants", nargs="*", default=[],
                    help="agent:memory:detector combos (e.g. jev:none:none jev:triggered:jev); overrides the three above")
@@ -93,6 +100,11 @@ def main():
     args = p.parse_args()
 
     variants = [v.split(":") for v in args.variants] or [[args.agent, args.memory, args.detector]]
+    if args.case_mode != "off":
+        if args.case_day is None or args.case_day < 0 or any(v[0] not in ("mp", "jev") for v in variants):
+            p.error("case memory requires --case_day >= 0 and an mp or jev controller")
+        if args.case_mode != "read" and len(args.env_name) * len(args.events) * len(variants) != 1:
+            p.error("collect one trajectory per day; use separate invocations with distinct day indices")
     decider = None  # loaded once, shared by all episodes of this process
     for env_name in args.env_name:
         for events in args.events:
@@ -114,7 +126,8 @@ def run_one(args, decider):
     run = f"{args.junction}__{args.env_name}__{label}__ev-{args.events.replace(':', '')}__s{args.seed}"
     run += f"__{args.tag}" if args.tag else ""
     out = os.path.join(args.out_dir, run.replace("/", "_") + ".json")
-    if args.skip_existing and os.path.exists(out):
+    # A result file alone cannot certify publication into the requested archive or its current prior-day contents.
+    if args.skip_existing and args.case_mode == "off" and os.path.exists(out):
         print("exists", out)
         return
 
@@ -125,14 +138,17 @@ def run_one(args, decider):
     elif args.events != "none":
         events = args.events
     work = os.path.join(ROOT, "records", "sumo_work", run.replace("/", "_"))
-    env = SumoTSCEnv(args.junction, args.env_name, work, events=events, route_file=args.route_file, seed=args.seed,
+    cases = (CaseMemory(args.case_store, args.junction, args.env_name.split("_", 1)[0], args.action_type,
+                        args.case_day, args.case_mode) if args.case_mode != "off" else None)
+    route_file = os.path.abspath(args.route_file) if args.route_file else None
+    env = SumoTSCEnv(args.junction, args.env_name, work, events=events, route_file=route_file, seed=args.seed,
                      action_type="next_or_not" if args.agent == "unitsa" else args.action_type)
 
     obs = env.reset()
     if args.agent in ("mp", "jev"):
         from jevtraffic.sumo_agents import Controller
 
-        notify = os.path.join(args.out_dir, "..", "events", run.replace("/", "_") + ".jsonl")
+        notify = os.path.join(os.path.dirname(os.path.abspath(args.out_dir)), "events", run.replace("/", "_") + ".jsonl")
         teacher = None
         if args.teacher and args.action_type == "next_or_not":
             from jevtraffic.unitsa import UniTSAAgent
@@ -140,7 +156,7 @@ def run_one(args, decider):
             teacher = UniTSAAgent(env, args.teacher)
         agent = Controller(env, base=args.agent, decider=decider, memory=args.memory, detector=args.detector,
                            notify_path=notify if args.detector != "none" else None, tau_event=args.tau_event,
-                           state_format=args.state_format, teacher=teacher)
+                           state_format=args.state_format, teacher=teacher, case_memory=cases)
     elif args.agent == "unitsa":
         from jevtraffic.unitsa import UniTSAAgent
 
@@ -155,7 +171,10 @@ def run_one(args, decider):
         agent = BenchmarkAgent(env, args.agent)
     t0 = time.time()
     while not env.done:
+        before = obs
         obs = env.step(agent.act(obs))
+        if cases:
+            cases.record(before, obs)
     wall = time.time() - t0
     env.close()
 
@@ -171,6 +190,8 @@ def run_one(args, decider):
         if args.save_steps:
             result["steps"] = agent.steps
     result["ground_truth"] = {"accidents": env.accidents, "special_vehicles": env.specials, "v2x_seen": env.v2x_seen}
+    if cases:
+        cases.publish()
     os.makedirs(args.out_dir, exist_ok=True)
     with open(out, "w") as f:
         json.dump(result, f)

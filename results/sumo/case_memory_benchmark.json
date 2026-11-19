@@ -1,0 +1,446 @@
+{
+  "sumo": "1.28.0",
+  "action_type": "next_or_not",
+  "policy": "mp",
+  "detector": "rule",
+  "history_days": [
+    0,
+    1
+  ],
+  "history_events": "event_1",
+  "history_intervals": {
+    "France_Massy": [
+      161,
+      161
+    ],
+    "Hongkong_YMT": [
+      157,
+      161
+    ],
+    "SouthKorea_Songdo": [
+      160,
+      160
+    ]
+  },
+  "test_days": [
+    2,
+    3,
+    4
+  ],
+  "configured_seed": 0,
+  "pooled": {
+    "queries": 1444,
+    "hits": 1406,
+    "paired_intervals": 1370,
+    "depth_counts": {
+      "1": 30,
+      "2": 84,
+      "3": 172,
+      "4": 1120
+    },
+    "by_scene": {
+      "ordinary": {
+        "queries": 1402,
+        "hits": 1402
+      },
+      "V2X police": {
+        "queries": 18,
+        "hits": 0
+      },
+      "queued green without discharge": {
+        "queries": 4,
+        "hits": 4
+      },
+      "V2X ambulance": {
+        "queries": 13,
+        "hits": 0
+      },
+      "V2X fire_engine": {
+        "queries": 7,
+        "hits": 0
+      }
+    },
+    "lookup_ms": 0.056,
+    "paired_mae": {
+      "tree_queue_change": 1.38,
+      "action_only_queue_change": 1.735,
+      "tree_departures": 1.095,
+      "action_only_departures": 1.918
+    }
+  },
+  "runs": [
+    {
+      "junction": "France_Massy",
+      "day": 2,
+      "pattern": "high_density",
+      "events": "event_1",
+      "same_actions": true,
+      "ATT": 66.486,
+      "queries": 162,
+      "hits": 156,
+      "depth_counts": {
+        "4": 113,
+        "3": 31,
+        "1": 4,
+        "2": 8
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 152,
+          "hits": 152
+        },
+        "V2X police": {
+          "queries": 3,
+          "hits": 0
+        },
+        "queued green without discharge": {
+          "queries": 4,
+          "hits": 4
+        },
+        "V2X ambulance": {
+          "queries": 3,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 139,
+      "paired_mae": {
+        "tree_queue_change": 0.831,
+        "action_only_queue_change": 1.002,
+        "tree_departures": 0.646,
+        "action_only_departures": 1.297
+      },
+      "lookup_ms": 0.046
+    },
+    {
+      "junction": "France_Massy",
+      "day": 3,
+      "pattern": "fluctuating_commuter",
+      "events": "random:7",
+      "same_actions": true,
+      "ATT": 54.494,
+      "queries": 161,
+      "hits": 159,
+      "depth_counts": {
+        "4": 120,
+        "2": 6,
+        "3": 30,
+        "1": 3
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 159,
+          "hits": 159
+        },
+        "V2X fire_engine": {
+          "queries": 2,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 153,
+      "paired_mae": {
+        "tree_queue_change": 0.543,
+        "action_only_queue_change": 0.611,
+        "tree_departures": 0.578,
+        "action_only_departures": 1.051
+      },
+      "lookup_ms": 0.049
+    },
+    {
+      "junction": "France_Massy",
+      "day": 4,
+      "pattern": "increasing_demand",
+      "events": "none",
+      "same_actions": true,
+      "ATT": 60.479,
+      "queries": 165,
+      "hits": 165,
+      "depth_counts": {
+        "4": 127,
+        "3": 28,
+        "2": 8,
+        "1": 2
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 165,
+          "hits": 165
+        }
+      },
+      "paired_intervals": 158,
+      "paired_mae": {
+        "tree_queue_change": 0.612,
+        "action_only_queue_change": 0.736,
+        "tree_departures": 0.669,
+        "action_only_departures": 1.174
+      },
+      "lookup_ms": 0.073
+    },
+    {
+      "junction": "Hongkong_YMT",
+      "day": 2,
+      "pattern": "high_density",
+      "events": "event_1",
+      "same_actions": true,
+      "ATT": 39.686,
+      "queries": 161,
+      "hits": 158,
+      "depth_counts": {
+        "3": 10,
+        "2": 10,
+        "4": 132,
+        "1": 6
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 158,
+          "hits": 158
+        },
+        "V2X police": {
+          "queries": 1,
+          "hits": 0
+        },
+        "V2X ambulance": {
+          "queries": 2,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 158,
+      "paired_mae": {
+        "tree_queue_change": 1.653,
+        "action_only_queue_change": 2.104,
+        "tree_departures": 1.572,
+        "action_only_departures": 2.524
+      },
+      "lookup_ms": 0.051
+    },
+    {
+      "junction": "Hongkong_YMT",
+      "day": 3,
+      "pattern": "fluctuating_commuter",
+      "events": "random:7",
+      "same_actions": true,
+      "ATT": 29.884,
+      "queries": 159,
+      "hits": 152,
+      "depth_counts": {
+        "3": 5,
+        "2": 3,
+        "4": 144
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 152,
+          "hits": 152
+        },
+        "V2X ambulance": {
+          "queries": 5,
+          "hits": 0
+        },
+        "V2X fire_engine": {
+          "queries": 2,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 152,
+      "paired_mae": {
+        "tree_queue_change": 0.598,
+        "action_only_queue_change": 0.901,
+        "tree_departures": 0.62,
+        "action_only_departures": 1.429
+      },
+      "lookup_ms": 0.051
+    },
+    {
+      "junction": "Hongkong_YMT",
+      "day": 4,
+      "pattern": "increasing_demand",
+      "events": "none",
+      "same_actions": true,
+      "ATT": 36.143,
+      "queries": 159,
+      "hits": 159,
+      "depth_counts": {
+        "3": 22,
+        "2": 4,
+        "4": 132,
+        "1": 1
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 159,
+          "hits": 159
+        }
+      },
+      "paired_intervals": 159,
+      "paired_mae": {
+        "tree_queue_change": 1.626,
+        "action_only_queue_change": 2.041,
+        "tree_departures": 1.437,
+        "action_only_departures": 2.31
+      },
+      "lookup_ms": 0.053
+    },
+    {
+      "junction": "SouthKorea_Songdo",
+      "day": 2,
+      "pattern": "high_density",
+      "events": "event_1",
+      "same_actions": true,
+      "ATT": 96.472,
+      "queries": 155,
+      "hits": 138,
+      "depth_counts": {
+        "4": 99,
+        "2": 18,
+        "3": 13,
+        "1": 8
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 138,
+          "hits": 138
+        },
+        "V2X police": {
+          "queries": 14,
+          "hits": 0
+        },
+        "V2X ambulance": {
+          "queries": 3,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 135,
+      "paired_mae": {
+        "tree_queue_change": 3.154,
+        "action_only_queue_change": 3.829,
+        "tree_departures": 1.938,
+        "action_only_departures": 3.298
+      },
+      "lookup_ms": 0.063
+    },
+    {
+      "junction": "SouthKorea_Songdo",
+      "day": 3,
+      "pattern": "fluctuating_commuter",
+      "events": "random:7",
+      "same_actions": true,
+      "ATT": 67.205,
+      "queries": 165,
+      "hits": 162,
+      "depth_counts": {
+        "4": 135,
+        "2": 11,
+        "3": 15,
+        "1": 1
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 162,
+          "hits": 162
+        },
+        "V2X fire_engine": {
+          "queries": 3,
+          "hits": 0
+        }
+      },
+      "paired_intervals": 162,
+      "paired_mae": {
+        "tree_queue_change": 1.53,
+        "action_only_queue_change": 1.968,
+        "tree_departures": 1.165,
+        "action_only_departures": 2.16
+      },
+      "lookup_ms": 0.058
+    },
+    {
+      "junction": "SouthKorea_Songdo",
+      "day": 4,
+      "pattern": "increasing_demand",
+      "events": "none",
+      "same_actions": true,
+      "ATT": 81.337,
+      "queries": 157,
+      "hits": 157,
+      "depth_counts": {
+        "4": 118,
+        "2": 16,
+        "3": 18,
+        "1": 5
+      },
+      "by_scene": {
+        "ordinary": {
+          "queries": 157,
+          "hits": 157
+        }
+      },
+      "paired_intervals": 154,
+      "paired_mae": {
+        "tree_queue_change": 2.019,
+        "action_only_queue_change": 2.582,
+        "tree_departures": 1.261,
+        "action_only_departures": 2.097
+      },
+      "lookup_ms": 0.057
+    }
+  ],
+  "v2x_history_comparison": {
+    "test_days": [
+      7,
+      8,
+      9
+    ],
+    "events": [
+      "event_1",
+      "random:7",
+      "none"
+    ],
+    "short_history": [
+      0,
+      1
+    ],
+    "long_history": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "runs": [
+      {
+        "junction": "France_Massy",
+        "two_days": {
+          "queries": 6,
+          "hits": 0
+        },
+        "seven_days": {
+          "queries": 6,
+          "hits": 4
+        }
+      },
+      {
+        "junction": "Hongkong_YMT",
+        "two_days": {
+          "queries": 10,
+          "hits": 0
+        },
+        "seven_days": {
+          "queries": 10,
+          "hits": 7
+        }
+      },
+      {
+        "junction": "SouthKorea_Songdo",
+        "two_days": {
+          "queries": 6,
+          "hits": 2
+        },
+        "seven_days": {
+          "queries": 6,
+          "hits": 4
+        }
+      }
+    ]
+  }
+}
