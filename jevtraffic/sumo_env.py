@@ -149,16 +149,11 @@ def scenario_paths(junction: str, env_name: str) -> dict:
 def write_sumocfg(path: str, net_file: str, route_file: str, additional_files: list[str]) -> str:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     adds = ", ".join(additional_files)
-    with open(path, "w") as f:
-        f.write(f"""<?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <input>
-        <net-file value="{net_file}"/>
-        <route-files value="{route_file}"/>
-        <additional-files value="{adds}"/>
-    </input>
-</configuration>
-""")
+    root = ET.Element("configuration")
+    inputs = ET.SubElement(root, "input")
+    for tag, value in (("net-file", net_file), ("route-files", route_file), ("additional-files", adds)):
+        ET.SubElement(inputs, tag, value=value)
+    ET.ElementTree(root).write(path, encoding="utf-8", xml_declaration=True)
     return path
 
 

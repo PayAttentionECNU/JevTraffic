@@ -22,17 +22,21 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from jevtraffic.days import make_day  # noqa: E402
+from jevtraffic.case_memory import CaseMemory  # noqa: E402
 from jevtraffic.longterm import AdaptationPolicy, LongTermMemory  # noqa: E402
 from jevtraffic.sumo_agents import Controller, mp_action  # noqa: E402
 from jevtraffic.sumo_env import ROOT, SumoTSCEnv  # noqa: E402
 
 
-def episode(junction, info, work, policy, seed, record=False):
+def episode(junction, info, work, policy, seed, record=False, cases=None):
     env = SumoTSCEnv(junction, info["env_name"], work, route_file=info["route_file"], seed=seed)
     obs = env.reset()
-    ctl = Controller(env, base="jev", decider=policy, record_states=record) if policy is not None else None
+    ctl = Controller(env, base="jev", decider=policy, record_states=record, case_memory=cases) if policy is not None else None
     while not env.done:
+        before = obs
         obs = env.step(ctl.act(obs) if ctl else mp_action(obs))
+        if cases:
+            cases.record(before, obs)
     env.close()
     return env.metrics(), ctl
 
@@ -63,6 +67,8 @@ def main():
     p.add_argument("--net", default="normal")
     p.add_argument("--days", type=int, default=14)
     p.add_argument("--adapt", default="off", choices=["off", "daily", "weekly", "auto"])
+    p.add_argument("--case_mode", default="off", choices=["off", "collect", "read", "online"])
+    p.add_argument("--case_store", help="case archive shared by collection and read-only evaluation")
     p.add_argument("--shared", required=True, help="shared (all-junction) adapter")
     p.add_argument("--model", default=os.path.expanduser("~/zzy/hf_models/Qwen2.5-7B-Instruct"))
     p.add_argument("--window", type=int, default=7)
@@ -73,7 +79,13 @@ def main():
     args = p.parse_args()
 
     tag = f"{args.junction}__{args.net}__{args.adapt}"
-    mem = LongTermMemory(os.path.join(ROOT, "records", "longterm", args.adapt), args.junction)
+    run_group = args.adapt
+    if args.case_mode != "off":
+        tag += f"__cases_{args.case_mode}"
+        run_group += f"_{args.net}_cases_{args.case_mode}"
+    default_source = "collect" if args.case_mode == "read" else args.case_mode
+    case_root = args.case_store or os.path.join(ROOT, "records", "day_cases", args.adapt, default_source)
+    mem = LongTermMemory(os.path.join(ROOT, "records", "longterm", run_group), args.junction)
     for f in (mem.decisions_path, mem.days_path):
         if os.path.exists(f):
             os.remove(f)
@@ -86,7 +98,9 @@ def main():
     for day in range(args.days):
         info = make_day(args.junction, args.net, day, routes)
         mp_m, _ = episode(args.junction, info, work, None, seed=0)
-        m, ctl = episode(args.junction, info, work, dec, seed=0, record=True)
+        cases = (CaseMemory(case_root, args.junction, args.net, "choose_next_phase", day, args.case_mode)
+                 if args.case_mode != "off" else None)
+        m, ctl = episode(args.junction, info, work, dec, seed=0, record=True, cases=cases)
         n = mem.log_decisions(day, ctl.steps)
         s = ctl.summary()
         ctl = None  # the controller holds a reference to the decider
@@ -94,6 +108,9 @@ def main():
                "ATT": m["ATT"], "AWT": m["AWT"], "mp_ATT": mp_m["ATT"], "mp_AWT": mp_m["AWT"],
                "agree_mp": s.get("agree_mp"), "mean_conf": s.get("mean_conf"), "ms_per_call": s.get("ms_per_call"),
                "decisions": n, "deployed": os.path.basename(deployed) if deployed else "shared"}
+        if cases:
+            cases.publish()
+            row["case_memory"] = s["case_memory"]
         adapt, why = policy.should_adapt(day, rows + [row])
         row["adapt_reason"] = why
         if adapt:
@@ -112,12 +129,15 @@ def main():
             # replay a re-perturbed version of the day (other demand jitter / thinning; the SUMO seed alone barely
             # changes these scenarios): current vs candidate
             replay = make_day(args.junction, args.net, day, routes + "_replay", seed=1)
+            # Both validation arms see exactly the same earlier days. Replays never publish.
+            frozen = (CaseMemory(case_root, args.junction, args.net, "choose_next_phase", day, "read")
+                      if args.case_mode in ("online", "read") else None)
             cur = load_decider(args.model, [args.shared] + ([deployed] if deployed else []))
-            cur_m, _ = episode(args.junction, replay, work, cur, seed=0)
+            cur_m, _ = episode(args.junction, replay, work, cur, seed=0, cases=frozen)
             cur = None
             release()
             cand_dec = load_decider(args.model, [args.shared, cand])
-            cand_m, _ = episode(args.junction, replay, work, cand_dec, seed=0)
+            cand_m, _ = episode(args.junction, replay, work, cand_dec, seed=0, cases=frozen)
             accept = cand_m["ATT"] < cur_m["ATT"]
             row.update(adapted=True, train_records=sum(1 for _ in open(train)), train_s=round(train_s, 1),
                        replay_current_ATT=cur_m["ATT"], replay_candidate_ATT=cand_m["ATT"], accepted=accept)
