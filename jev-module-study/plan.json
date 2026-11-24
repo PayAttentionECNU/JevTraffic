@@ -1,0 +1,3590 @@
+{
+  "rows": [
+    {
+      "id": "France_Massy__easy__low_density__s731000000__none",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 166,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000000/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "0af08c6beaaf8b715c949c390b810e58efe81365466bb49bea28a14185bac68a",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 153
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000000__accident",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 166,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000000/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "0af08c6beaaf8b715c949c390b810e58efe81365466bb49bea28a14185bac68a",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 0,
+            "position": 72.88,
+            "depart_time": 153,
+            "duration": 105
+          }
+        ],
+        []
+      ],
+      "event_sha256": "c4cf05fbdafe1464f3ba4408b64b46795a88a31d79a84b29403e6e7a140d2993",
+      "anchor": 171
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000000__special",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 166,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000000/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "0af08c6beaaf8b715c949c390b810e58efe81365466bb49bea28a14185bac68a",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 153,
+            "route": [
+              "-172801188#1.174",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "5e4981df4eefa91535a9d8b552c50a8615ec35a639197e2adf6c97c0de77f677",
+      "anchor": 153
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000000__both",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 166,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000000/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "0af08c6beaaf8b715c949c390b810e58efe81365466bb49bea28a14185bac68a",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 0,
+            "position": 72.88,
+            "depart_time": 153,
+            "duration": 210
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 171,
+            "route": [
+              "-172801188#1.174",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "449a48f58bb397d761722fd6b016f402ce3e96b6e41220dfbcc90f25d197f104",
+      "anchor": 171
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000001__none",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 159,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000001/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "5df46e7a8d7020227056db4e5bae9b7fcdc061242a630b14a2ec8699997a258b",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 128
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000001__accident",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 159,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000001/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "5df46e7a8d7020227056db4e5bae9b7fcdc061242a630b14a2ec8699997a258b",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 0,
+            "position": 31.51,
+            "depart_time": 128,
+            "duration": 160
+          }
+        ],
+        []
+      ],
+      "event_sha256": "2e0a790233dbde53c6512e3b0e626ac7103ad11d52b28c148afdd82860466fa3",
+      "anchor": 145
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000001__special",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 159,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000001/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "5df46e7a8d7020227056db4e5bae9b7fcdc061242a630b14a2ec8699997a258b",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 128,
+            "route": [
+              "172801130.183",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "65fe0afeb840068445ac3689727c07901c3f35fe4ebafbe71f0c37d58ef65ef6",
+      "anchor": 128
+    },
+    {
+      "id": "France_Massy__easy__low_density__s731000001__both",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731000001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 159,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__low_density__s731000001/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "5df46e7a8d7020227056db4e5bae9b7fcdc061242a630b14a2ec8699997a258b",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 0,
+            "position": 31.51,
+            "depart_time": 128,
+            "duration": 237
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 145,
+            "route": [
+              "172801130.183",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "643cc5cae11a3fea940f939f53c812c22efb27f1d9fc1ae760ab5a7c54a5befd",
+      "anchor": 145
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000200__none",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 387,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000200/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "02fe6041d877ca7bb32e25a3c47deae05f5a502c7f5eced06e2d262d394f9bc6",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 364
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000200__accident",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 387,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000200/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "02fe6041d877ca7bb32e25a3c47deae05f5a502c7f5eced06e2d262d394f9bc6",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 54.95,
+            "depart_time": 364,
+            "duration": 190
+          }
+        ],
+        []
+      ],
+      "event_sha256": "2d40776844470c2055ebbcc0bf5f69072d90876123689ffe596ef5e21966dec0",
+      "anchor": 383
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000200__special",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 387,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000200/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "02fe6041d877ca7bb32e25a3c47deae05f5a502c7f5eced06e2d262d394f9bc6",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 364,
+            "route": [
+              "-172801188#1.174",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "a53391e48f9954a9ca9c0a293d7ca77b63008ec8b1dd05b30ab1fd89d79d9f4a",
+      "anchor": 364
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000200__both",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 387,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000200/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "02fe6041d877ca7bb32e25a3c47deae05f5a502c7f5eced06e2d262d394f9bc6",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 47.68,
+            "depart_time": 364,
+            "duration": 289
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 383,
+            "route": [
+              "-172801188#1.174",
+              "-172801130"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "1e72581a4dbf8c5a7e44693c4b12e81b837558127bbca47458c9ba01ab7e2568",
+      "anchor": 383
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000201__none",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 386,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000201/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "225c148fb16c70dabc5488707d9436bf3b84aecc4387ecabecbba888567184de",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 235
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000201__accident",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 386,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000201/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "225c148fb16c70dabc5488707d9436bf3b84aecc4387ecabecbba888567184de",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 1,
+            "position": 23.78,
+            "depart_time": 235,
+            "duration": 109
+          }
+        ],
+        []
+      ],
+      "event_sha256": "4f2ec87a4229f1675485a65f15b989daef3faeca5df0151acf6d776cb1181d80",
+      "anchor": 256
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000201__special",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 386,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000201/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "225c148fb16c70dabc5488707d9436bf3b84aecc4387ecabecbba888567184de",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 235,
+            "route": [
+              "172801130.183",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "a453e546e55822e2ed79d0907d0b28cf092c5cf9e9faca52603329bcc709ae54",
+      "anchor": 235
+    },
+    {
+      "id": "France_Massy__easy__high_density__s731000201__both",
+      "junction": "France_Massy",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731000201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 386,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__easy__high_density__s731000201/France_Massy_easy_day021.rou.xml",
+      "route_sha256": "225c148fb16c70dabc5488707d9436bf3b84aecc4387ecabecbba888567184de",
+      "network_sha256": [
+        "2079574fd1f5efa834b9374bb157acd1fa5c42a7c0a173192744426eec404523",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 1,
+            "position": 41.59,
+            "depart_time": 235,
+            "duration": 278
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 256,
+            "route": [
+              "172801130.183",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "04a313bd27d49c9feaf92ad558849d0cb885cb264f513ef83e0f485c368349da",
+      "anchor": 256
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002000__none",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 188,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002000/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "56deec89d25a32552ca4e1f1e8951befa81c45a21af33dc7ccced842e2e5b480",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 499
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002000__accident",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 188,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002000/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "56deec89d25a32552ca4e1f1e8951befa81c45a21af33dc7ccced842e2e5b480",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 0,
+            "position": 38.38,
+            "depart_time": 499,
+            "duration": 101
+          }
+        ],
+        []
+      ],
+      "event_sha256": "8f11cdeb68c3edd8f44cccee3fc981a06c4f0319d05beb1f30c6f835b0d895f1",
+      "anchor": 517
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002000__special",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 188,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002000/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "56deec89d25a32552ca4e1f1e8951befa81c45a21af33dc7ccced842e2e5b480",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 499,
+            "route": [
+              "172801130.183",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "3e27474e226293f2f077a4a0adbf5899b0f2a08b83951a9423077152b39af6c8",
+      "anchor": 499
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002000__both",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 188,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002000/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "56deec89d25a32552ca4e1f1e8951befa81c45a21af33dc7ccced842e2e5b480",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 0,
+            "position": 38.38,
+            "depart_time": 499,
+            "duration": 208
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 517,
+            "route": [
+              "172801130.183",
+              "172801188#1"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "6bdf6a487ca219269a2c8edffaf02245163f3b103430db0d7742f392577865de",
+      "anchor": 517
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002001__none",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 163,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002001/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "a9cf60fb232a69ade26c6540b2c3d68ab7667375224b1b7926e612e639732b14",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 387
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002001__accident",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 163,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002001/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "a9cf60fb232a69ade26c6540b2c3d68ab7667375224b1b7926e612e639732b14",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 1,
+            "position": 23.78,
+            "depart_time": 387,
+            "duration": 94
+          }
+        ],
+        []
+      ],
+      "event_sha256": "63464622d92a3e1781ac261dcc5946f60869a558c32941476279634b779dc38b",
+      "anchor": 409
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002001__special",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 163,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002001/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "a9cf60fb232a69ade26c6540b2c3d68ab7667375224b1b7926e612e639732b14",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 387,
+            "route": [
+              "-172801188#1.174",
+              "-172801130"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "9c787823493a70007b4e5fd7de2676b18c0c6c5a654c9d9399a120ef1747da02",
+      "anchor": 387
+    },
+    {
+      "id": "France_Massy__normal__low_density__s731002001__both",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731002001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 163,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__low_density__s731002001/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "a9cf60fb232a69ade26c6540b2c3d68ab7667375224b1b7926e612e639732b14",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "172801130.183",
+            "lane_index": 1,
+            "position": 23.78,
+            "depart_time": 387,
+            "duration": 294
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 409,
+            "route": [
+              "-172801188#1.174",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "c232273fed2dc113c07a06fba668d72f99d5c2873595cf479ef98e4b26d921ee",
+      "anchor": 409
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002200__none",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 353,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002200/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "5bdf86ef3e4f988ed3f7ebe07df3d4a62135bf5158e69a84d5116ea22b235041",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 398
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002200__accident",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 353,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002200/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "5bdf86ef3e4f988ed3f7ebe07df3d4a62135bf5158e69a84d5116ea22b235041",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 73.24,
+            "depart_time": 398,
+            "duration": 99
+          }
+        ],
+        []
+      ],
+      "event_sha256": "b8b3e27bbe75b949b6e1ecead9186fa2a77afd3cd3b1f43b4c0f59c17014d70e",
+      "anchor": 422
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002200__special",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 353,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002200/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "5bdf86ef3e4f988ed3f7ebe07df3d4a62135bf5158e69a84d5116ea22b235041",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 398,
+            "route": [
+              "-172801188#1.174",
+              "-172801188#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "c3be593544be2cc7a8003955abd4a8ba37e21b26b6314eea83b7fe7ecd7185fc",
+      "anchor": 398
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002200__both",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 353,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002200/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "5bdf86ef3e4f988ed3f7ebe07df3d4a62135bf5158e69a84d5116ea22b235041",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 73.24,
+            "depart_time": 398,
+            "duration": 207
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 422,
+            "route": [
+              "-172801188#1.174",
+              "-172801130"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "f71ffd50ca83d372d8135eeee737368148f096ed0a8e7d34eadf505f25c645b6",
+      "anchor": 422
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002201__none",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 373,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002201/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "f01c210260d63ec7d9b0195135e1a35e7e6562dd398532890ab88391433d6849",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 485
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002201__accident",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 373,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002201/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "f01c210260d63ec7d9b0195135e1a35e7e6562dd398532890ab88391433d6849",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 61.7,
+            "depart_time": 485,
+            "duration": 179
+          }
+        ],
+        []
+      ],
+      "event_sha256": "f7dfbbb4e63fe8fb8ea6b2f783a8cca15dfa8024f60f41b04c22ebddfd768a10",
+      "anchor": 503
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002201__special",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 373,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002201/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "f01c210260d63ec7d9b0195135e1a35e7e6562dd398532890ab88391433d6849",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 485,
+            "route": [
+              "172801188#0.85",
+              "-172801130"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "bce700f3ff7c42e936fddcfbc167ac65950f53c4a104af1c16815272643583c5",
+      "anchor": 485
+    },
+    {
+      "id": "France_Massy__normal__high_density__s731002201__both",
+      "junction": "France_Massy",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731002201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 373,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/France_Massy__normal__high_density__s731002201/France_Massy_normal_day021.rou.xml",
+      "route_sha256": "f01c210260d63ec7d9b0195135e1a35e7e6562dd398532890ab88391433d6849",
+      "network_sha256": [
+        "7d019642d2602019816aaea7d8d142643882a8da49fb61dde688d76905a8660d",
+        "47ce52e4857e42396eaa3f2914d7fc46c37ab8ba59887ff3cdaae453e328aa93",
+        "dfdfd9c244593d3170af8a555171265431aca25afd279a9ca07a6cd8a2295f1c",
+        "8b4e7767e4497a1bd86c634a251af79c639a53cc9294d96a0a67c4a912fd77e7"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "-172801188#1.174",
+            "lane_index": 1,
+            "position": 54.33,
+            "depart_time": 485,
+            "duration": 282
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 503,
+            "route": [
+              "172801188#0.85",
+              "172801188#1"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "b42474c216d5f8447bb2588ced5d9ba6c83816d2f1d5632ae7061970d9fdb560",
+      "anchor": 503
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010000__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 443,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010000/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "6de6e1ed1c53188c26e305ed709fbc1c33e6c1411b4d359a0e5edb9a09db6569",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 84
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010000__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 443,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010000/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "6de6e1ed1c53188c26e305ed709fbc1c33e6c1411b4d359a0e5edb9a09db6569",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 2,
+            "position": 89.01,
+            "depart_time": 84,
+            "duration": 159
+          }
+        ],
+        []
+      ],
+      "event_sha256": "1b3baa86d20e3a03a415980b50032fdce05ff3712b1429c62692fe5591c75e8b",
+      "anchor": 108
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010000__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 443,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010000/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "6de6e1ed1c53188c26e305ed709fbc1c33e6c1411b4d359a0e5edb9a09db6569",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 84,
+            "route": [
+              "315156946#0",
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "fecbcab6acef0ae8a77eaafd721b13aa3881f1743d183899b5ad39202113990a",
+      "anchor": 84
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010000__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 443,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010000/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "6de6e1ed1c53188c26e305ed709fbc1c33e6c1411b4d359a0e5edb9a09db6569",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 2,
+            "position": 103.71,
+            "depart_time": 84,
+            "duration": 293
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 108,
+            "route": [
+              "315156946#0",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "a16ab3a3384bb20f70eae749e0b50c55202f064d40e3db41305453e48b7257c1",
+      "anchor": 108
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010001__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 403,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010001/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "f6a662f9154d1fda71881b150fd81ca8d04d73a633f75cd4e4f8e12ae6df4d00",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 100
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010001__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 403,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010001/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "f6a662f9154d1fda71881b150fd81ca8d04d73a633f75cd4e4f8e12ae6df4d00",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "989312046#0",
+            "lane_index": 2,
+            "position": 193.87,
+            "depart_time": 100,
+            "duration": 137
+          }
+        ],
+        []
+      ],
+      "event_sha256": "09e49abdb85846d50c499ad1cd86f697d442c99344927b1e66ee70cbf1b3cd5b",
+      "anchor": 118
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010001__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 403,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010001/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "f6a662f9154d1fda71881b150fd81ca8d04d73a633f75cd4e4f8e12ae6df4d00",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 100,
+            "route": [
+              "525074961#6",
+              "429770748#1"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "7169a8ed34536ec74844e8978aafe3fd2b3001064f8a190d05a6dd05992f0268",
+      "anchor": 100
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__low_density__s731010001__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731010001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 403,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__low_density__s731010001/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "f6a662f9154d1fda71881b150fd81ca8d04d73a633f75cd4e4f8e12ae6df4d00",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "989312046#0",
+            "lane_index": 2,
+            "position": 193.87,
+            "depart_time": 100,
+            "duration": 226
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 118,
+            "route": [
+              "525074961#6",
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "070d2312036018dde6d5e5da237ffc570a7dc9b9f9e3dd6da1082304cca8c815",
+      "anchor": 118
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010200__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 825,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010200/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "035e01c3f86d66e72feb3e3e1595e155b00b659c542c053580c6bfdcd7515ae0",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 369
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010200__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 825,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010200/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "035e01c3f86d66e72feb3e3e1595e155b00b659c542c053580c6bfdcd7515ae0",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "315156946#0",
+            "lane_index": 3,
+            "position": 249.27,
+            "depart_time": 369,
+            "duration": 142
+          }
+        ],
+        []
+      ],
+      "event_sha256": "0606d2f0299450f974e3e9f257a13c96a663127313402a7139ff2845c53a961a",
+      "anchor": 381
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010200__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 825,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010200/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "035e01c3f86d66e72feb3e3e1595e155b00b659c542c053580c6bfdcd7515ae0",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 369,
+            "route": [
+              "E1",
+              "525074961#10",
+              "525074961#11"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "0eb34cbf5adc2860fc5f09b1cea68f2ab5b22de7513802123089404d9e07034a",
+      "anchor": 369
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010200__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 825,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010200/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "035e01c3f86d66e72feb3e3e1595e155b00b659c542c053580c6bfdcd7515ae0",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "315156946#0",
+            "lane_index": 3,
+            "position": 249.27,
+            "depart_time": 369,
+            "duration": 228
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 381,
+            "route": [
+              "E1",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "2b562da2bb3eeccd841773a603fdb0d2bad58912fe89848a0a7f3719e746a411",
+      "anchor": 381
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010201__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 936,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010201/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "03ae70b95e447c3850ee02468db7377996d21121e88e435fca2e20545ff5dabf",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 120
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010201__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 936,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010201/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "03ae70b95e447c3850ee02468db7377996d21121e88e435fca2e20545ff5dabf",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 0,
+            "position": 84.9,
+            "depart_time": 120,
+            "duration": 86
+          }
+        ],
+        []
+      ],
+      "event_sha256": "097b42727b88ccc823140a459a010784f9853f463c2580dbb47eefbefe5c43be",
+      "anchor": 132
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010201__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 936,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010201/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "03ae70b95e447c3850ee02468db7377996d21121e88e435fca2e20545ff5dabf",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 120,
+            "route": [
+              "315156946#0",
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "18d25af42083348005639eda108b1de31bd7bc7f72565609b55b9ec9ad8c5332",
+      "anchor": 120
+    },
+    {
+      "id": "SouthKorea_Songdo__easy__high_density__s731010201__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731010201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 936,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__easy__high_density__s731010201/SouthKorea_Songdo_easy_day021.rou.xml",
+      "route_sha256": "03ae70b95e447c3850ee02468db7377996d21121e88e435fca2e20545ff5dabf",
+      "network_sha256": [
+        "dbdbc3974782962405c26089ec6693783b2bda78d020acbbf373c6db98221c74",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 0,
+            "position": 87.77,
+            "depart_time": 120,
+            "duration": 286
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 132,
+            "route": [
+              "315156946#0",
+              "525074961#10",
+              "525074961#11"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "90708167c8726507e5407c968c803d989b28ead8626f0288c93dc2bd390dce93",
+      "anchor": 132
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012000__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 426,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012000/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "b835a9ca4e4ac1aef06f613b4564455d4c53482f70b7f6adc4264acc04cae4fb",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 319
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012000__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 426,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012000/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "b835a9ca4e4ac1aef06f613b4564455d4c53482f70b7f6adc4264acc04cae4fb",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "E1",
+            "lane_index": 2,
+            "position": 256.97,
+            "depart_time": 319,
+            "duration": 80
+          }
+        ],
+        []
+      ],
+      "event_sha256": "f42ccdee49efc0b6ae1199d993199e8734a94b0fb53bf45f992a15310cf74d26",
+      "anchor": 335
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012000__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 426,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012000/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "b835a9ca4e4ac1aef06f613b4564455d4c53482f70b7f6adc4264acc04cae4fb",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 319,
+            "route": [
+              "E1",
+              "525074961#10",
+              "525074961#11"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "5be91e9d2ef79d5ebb104fa876340b95b6945ea5bbee0d3d1ee69fc917a9b2c0",
+      "anchor": 319
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012000__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 426,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012000/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "b835a9ca4e4ac1aef06f613b4564455d4c53482f70b7f6adc4264acc04cae4fb",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "E1",
+            "lane_index": 2,
+            "position": 256.97,
+            "depart_time": 319,
+            "duration": 197
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 335,
+            "route": [
+              "E1",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "a2dcbb0d0ad3c4cab9840af6ad8a6c1c62a142a2577109f489013dafba6c3e35",
+      "anchor": 335
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012001__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 441,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012001/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "33c64fe0a8802620bdd57296729f3b7186163381f39ded4d5fb2df84a087c3fe",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 273
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012001__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 441,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012001/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "33c64fe0a8802620bdd57296729f3b7186163381f39ded4d5fb2df84a087c3fe",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "315156946#0",
+            "lane_index": 5,
+            "position": 259.23,
+            "depart_time": 273,
+            "duration": 80
+          }
+        ],
+        []
+      ],
+      "event_sha256": "310ff667a34d1026e58ee3fd9dc30308b9af818a44dad4f066a017afbb650b68",
+      "anchor": 297
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012001__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 441,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012001/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "33c64fe0a8802620bdd57296729f3b7186163381f39ded4d5fb2df84a087c3fe",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 273,
+            "route": [
+              "315156946#0",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "42dcb54245e86c1d0fcc708fadba51372473afdd2b3161e44329e4da6ce0d83a",
+      "anchor": 273
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__low_density__s731012001__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731012001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 441,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__low_density__s731012001/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "33c64fe0a8802620bdd57296729f3b7186163381f39ded4d5fb2df84a087c3fe",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "315156946#0",
+            "lane_index": 5,
+            "position": 259.23,
+            "depart_time": 273,
+            "duration": 197
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 297,
+            "route": [
+              "315156946#0",
+              "E2",
+              "E3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "2bb6982c166b3a5f3ad52bb50d291329c8f13258df60d3ff0ea92d4d45c9494b",
+      "anchor": 297
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012200__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 878,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012200/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "44aad0e195453cbabdea52eb6e9b92338d4b360eb9af5cca8102f3da5ca9a745",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 86
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012200__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 878,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012200/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "44aad0e195453cbabdea52eb6e9b92338d4b360eb9af5cca8102f3da5ca9a745",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 1,
+            "position": 105.64,
+            "depart_time": 86,
+            "duration": 161
+          }
+        ],
+        []
+      ],
+      "event_sha256": "9d88c1987d447b7fbf120754bc30ea8b3bd1c681bd2dcd8d27359d6175101d32",
+      "anchor": 99
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012200__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 878,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012200/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "44aad0e195453cbabdea52eb6e9b92338d4b360eb9af5cca8102f3da5ca9a745",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 86,
+            "route": [
+              "525074961#6",
+              "525074961#10",
+              "525074961#11"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "6a0703bd784592e0aa43ffc1b308f2d50742301e561607c7e99fc6f39619b8b0",
+      "anchor": 86
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012200__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 878,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012200/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "44aad0e195453cbabdea52eb6e9b92338d4b360eb9af5cca8102f3da5ca9a745",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "525074961#6",
+            "lane_index": 1,
+            "position": 105.64,
+            "depart_time": 86,
+            "duration": 238
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 99,
+            "route": [
+              "525074961#6",
+              "525074961#10",
+              "525074961#11"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "496a0e1b86f3ac859001ebaf74e469a2fc24ee69495176b450020bd765917c4c",
+      "anchor": 99
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012201__none",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 826,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012201/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "31dc015ed5aa18c3b4fce0ab4df1cdf1db999302124145e113cfe2a3bd8951d8",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 150
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012201__accident",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 826,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012201/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "31dc015ed5aa18c3b4fce0ab4df1cdf1db999302124145e113cfe2a3bd8951d8",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "989312046#0",
+            "lane_index": 0,
+            "position": 185.18,
+            "depart_time": 150,
+            "duration": 152
+          }
+        ],
+        []
+      ],
+      "event_sha256": "53fa6296b7000d77438974c93460d84512df9d3925b9aa66f0a6045c77487c27",
+      "anchor": 169
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012201__special",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 826,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012201/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "31dc015ed5aa18c3b4fce0ab4df1cdf1db999302124145e113cfe2a3bd8951d8",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 150,
+            "route": [
+              "989312046#0",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "852657b2592c1fce1291d44acc50ca9de93d7bc36404928ca87451216a0fd2db",
+      "anchor": 150
+    },
+    {
+      "id": "SouthKorea_Songdo__normal__high_density__s731012201__both",
+      "junction": "SouthKorea_Songdo",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731012201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 826,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/SouthKorea_Songdo__normal__high_density__s731012201/SouthKorea_Songdo_normal_day021.rou.xml",
+      "route_sha256": "31dc015ed5aa18c3b4fce0ab4df1cdf1db999302124145e113cfe2a3bd8951d8",
+      "network_sha256": [
+        "5031c0295342af5a7ff5d4311a393868bd25ee442cfe4130ecae3bc55ddad5d9",
+        "e67d608a77925e73c5a7535abe95ddca041b124c6ec0e669b98a11bd74c73284",
+        "91f0639f10bc03a7ad08863cf3be0e3f39251e25e53f9376baafd31aa9decec8",
+        "cf59407a7f8315e6f532e2030284571328c5d831d97516ed45f870fe53d04801"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "989312046#0",
+            "lane_index": 0,
+            "position": 190.57,
+            "depart_time": 150,
+            "duration": 293
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 169,
+            "route": [
+              "989312046#0",
+              "989312046#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "9c91b908594adde3eca60c274ddf4bd8464d5a24288c1f36ddfe7c3c39f0f3ff",
+      "anchor": 169
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020000__none",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 270,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020000/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "37ee698958b92457d015cfb65036b82ae5a1f293e6f0c42a679842902f8b97de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 300
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020000__accident",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 270,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020000/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "37ee698958b92457d015cfb65036b82ae5a1f293e6f0c42a679842902f8b97de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 1,
+            "position": 30.39,
+            "depart_time": 300,
+            "duration": 207
+          }
+        ],
+        []
+      ],
+      "event_sha256": "f117fb172a8f655c1c2e158f06273db389ba5525c4d96971d8ecb65b934d61ab",
+      "anchor": 319
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020000__special",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 270,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020000/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "37ee698958b92457d015cfb65036b82ae5a1f293e6f0c42a679842902f8b97de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 300,
+            "route": [
+              "960661806#0",
+              "102640426#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "baf799158f678cdcc3f83a37ab736c1370e325ad45f9d20bb939083ead03a907",
+      "anchor": 300
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020000__both",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 270,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020000/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "37ee698958b92457d015cfb65036b82ae5a1f293e6f0c42a679842902f8b97de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 1,
+            "position": 30.39,
+            "depart_time": 300,
+            "duration": 261
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 319,
+            "route": [
+              "960661806#0",
+              "102640426#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "fcb36b25436edf709dc54bff7a536fe072eb4dd022a254e54369b05d611e650b",
+      "anchor": 319
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020001__none",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 292,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020001/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "4d0f38ab0c32053cd5b5410aa2b27e8c72502b006e84ca61698c0522abbef5cc",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 168
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020001__accident",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 292,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020001/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "4d0f38ab0c32053cd5b5410aa2b27e8c72502b006e84ca61698c0522abbef5cc",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 0,
+            "position": 30.39,
+            "depart_time": 168,
+            "duration": 209
+          }
+        ],
+        []
+      ],
+      "event_sha256": "d2c79d97bed1b878037a2c68435f3e2e039bbeff587aa0ddd9f7196927ce3601",
+      "anchor": 181
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020001__special",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 292,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020001/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "4d0f38ab0c32053cd5b5410aa2b27e8c72502b006e84ca61698c0522abbef5cc",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 168,
+            "route": [
+              "30658263#0",
+              "102640432#0",
+              "102640432#3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "17d71fa323bf60e18d0c3acabc83e4099c9752dc8ac4a71ab3df15e79ea7056a",
+      "anchor": 168
+    },
+    {
+      "id": "Hongkong_YMT__easy__low_density__s731020001__both",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_low_density",
+      "demand": "low_density",
+      "seed": 731020001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 292,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__low_density__s731020001/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "4d0f38ab0c32053cd5b5410aa2b27e8c72502b006e84ca61698c0522abbef5cc",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 0,
+            "position": 30.39,
+            "depart_time": 168,
+            "duration": 262
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 181,
+            "route": [
+              "30658263#0",
+              "102640432#0",
+              "102640429"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "e84d9065e2f276b365046113453c548aa348de53a5df8e2a118fca31a735b8f3",
+      "anchor": 181
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020200__none",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 721,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020200/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "92f6fad4521b3bcc5bfb4bce3c745b5ed245815dfd8f54751d641c12621263f8",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 431
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020200__accident",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 721,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020200/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "92f6fad4521b3bcc5bfb4bce3c745b5ed245815dfd8f54751d641c12621263f8",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 0,
+            "position": 52.88,
+            "depart_time": 431,
+            "duration": 180
+          }
+        ],
+        []
+      ],
+      "event_sha256": "aa836435c972f46c6115dfd85205159884397f9c970520c8f0552c084bc07c04",
+      "anchor": 447
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020200__special",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 721,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020200/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "92f6fad4521b3bcc5bfb4bce3c745b5ed245815dfd8f54751d641c12621263f8",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 431,
+            "route": [
+              "960661806#0",
+              "102640426#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "7d01eec905ec2d0a1d2a472d1f3a5cfef9b2bd458fec027e09e23570c0716b10",
+      "anchor": 431
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020200__both",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 721,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020200/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "92f6fad4521b3bcc5bfb4bce3c745b5ed245815dfd8f54751d641c12621263f8",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 0,
+            "position": 52.88,
+            "depart_time": 431,
+            "duration": 247
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 447,
+            "route": [
+              "960661806#0",
+              "102640426#0"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "cbcd2c9c871da706f339827b3b92512868170dc1454b6bcea261129de6ba7f75",
+      "anchor": 447
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020201__none",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 626,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020201/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "8c4d4b4bc6efc7df1b5320eecd205be3f3679b256e64532b79db177ea04c68de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 306
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020201__accident",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 626,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020201/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "8c4d4b4bc6efc7df1b5320eecd205be3f3679b256e64532b79db177ea04c68de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 2,
+            "position": 30.39,
+            "depart_time": 306,
+            "duration": 121
+          }
+        ],
+        []
+      ],
+      "event_sha256": "6328e1de8ad900251c68843705ab117211441837a63016713520ac78781fea8a",
+      "anchor": 328
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020201__special",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 626,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020201/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "8c4d4b4bc6efc7df1b5320eecd205be3f3679b256e64532b79db177ea04c68de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 306,
+            "route": [
+              "30658263#0",
+              "102640432#0",
+              "102640429"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "87da29731b2193255f31a95ed01b38809fe6120b977acc94b137876c7bc4a112",
+      "anchor": 306
+    },
+    {
+      "id": "Hongkong_YMT__easy__high_density__s731020201__both",
+      "junction": "Hongkong_YMT",
+      "network": "easy",
+      "environment": "easy_high_density",
+      "demand": "high_density",
+      "seed": 731020201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 626,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__easy__high_density__s731020201/Hongkong_YMT_easy_day021.rou.xml",
+      "route_sha256": "8c4d4b4bc6efc7df1b5320eecd205be3f3679b256e64532b79db177ea04c68de",
+      "network_sha256": [
+        "5c38b20be2cf9dc311d3572262ac7f54a9f7b1812b66f83644604fcd7f10b00e",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "960661806#0",
+            "lane_index": 2,
+            "position": 30.39,
+            "depart_time": 306,
+            "duration": 218
+          }
+        ],
+        [
+          {
+            "id": "fixture_ambulance",
+            "type": "emergency",
+            "depart_time": 328,
+            "route": [
+              "30658263#0",
+              "102640432#0",
+              "102640429"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "3417667cba446ea8853a3d825e9549ce662169c1d10a8813b75ef0e4e9e94eec",
+      "anchor": 328
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022000__none",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022000,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 274,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022000/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "55c2cb5dda8b54e77901afab505d8ea05d813eb45540c0e450a27a5abe05fc39",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 260
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022000__accident",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022000,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 274,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022000/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "55c2cb5dda8b54e77901afab505d8ea05d813eb45540c0e450a27a5abe05fc39",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "1200878753#0",
+            "lane_index": 1,
+            "position": 51.0,
+            "depart_time": 260,
+            "duration": 127
+          }
+        ],
+        []
+      ],
+      "event_sha256": "fee596d7f8c11b6135500d666704272f9de44950466ad1d746a61b4c6e76f52e",
+      "anchor": 275
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022000__special",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022000,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 274,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022000/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "55c2cb5dda8b54e77901afab505d8ea05d813eb45540c0e450a27a5abe05fc39",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 260,
+            "route": [
+              "102454134#0",
+              "102640432#0",
+              "102640429"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "bd3ea9c6687d91788c9194096c71ae12ba147f21296710bc9ffb0731c311bb77",
+      "anchor": 260
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022000__both",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022000,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 274,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022000/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "55c2cb5dda8b54e77901afab505d8ea05d813eb45540c0e450a27a5abe05fc39",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "1200878753#0",
+            "lane_index": 1,
+            "position": 26.86,
+            "depart_time": 260,
+            "duration": 275
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 275,
+            "route": [
+              "102454134#0",
+              "102640432#0",
+              "102640432#3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "240b1891e5e8a56373bc3741f89ff0ee3f319eaa9f5ee0fbb3887b072782a8ea",
+      "anchor": 275
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022001__none",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022001,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 279,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022001/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "f97523dfdab233cc1d97480778f2022b20af48c7e71c3356ad82712c5d92de3d",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 440
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022001__accident",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022001,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 279,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022001/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "f97523dfdab233cc1d97480778f2022b20af48c7e71c3356ad82712c5d92de3d",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "30658263#0",
+            "lane_index": 0,
+            "position": 83.29,
+            "depart_time": 440,
+            "duration": 188
+          }
+        ],
+        []
+      ],
+      "event_sha256": "af6e5cc8579c9ce1ec74dbaeaeb0b84c288001563b9c0ac71c8c8c1c999228ac",
+      "anchor": 459
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022001__special",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022001,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 279,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022001/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "f97523dfdab233cc1d97480778f2022b20af48c7e71c3356ad82712c5d92de3d",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 440,
+            "route": [
+              "1200878753#0",
+              "102640412#0",
+              "102640412#0.25",
+              "102640412#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "3f0fa964124572496ebd68959ebc36c870762cd2b839c105ac33dc4b2d47cb71",
+      "anchor": 440
+    },
+    {
+      "id": "Hongkong_YMT__normal__low_density__s731022001__both",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_low_density",
+      "demand": "low_density",
+      "seed": 731022001,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 279,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__low_density__s731022001/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "f97523dfdab233cc1d97480778f2022b20af48c7e71c3356ad82712c5d92de3d",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "30658263#0",
+            "lane_index": 0,
+            "position": 83.29,
+            "depart_time": 440,
+            "duration": 251
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 459,
+            "route": [
+              "1200878753#0",
+              "102640412#0",
+              "102640412#0.25",
+              "102640412#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "447f8300efd77f2e57fc76816de737f205aaa776b473e5bd85aa009ee5175bd0",
+      "anchor": 459
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022200__none",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022200,
+      "replicate": 0,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 707,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022200/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "e76bb8b2ace58f48e4e731d4968faa30cff620662aacc838bae81ccbca9968cb",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 439
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022200__accident",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022200,
+      "replicate": 0,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 707,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022200/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "e76bb8b2ace58f48e4e731d4968faa30cff620662aacc838bae81ccbca9968cb",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "1200878753#0",
+            "lane_index": 2,
+            "position": 26.86,
+            "depart_time": 439,
+            "duration": 93
+          }
+        ],
+        []
+      ],
+      "event_sha256": "bbc986b79b559b623dd1d7a4538200cd20ad941f799ff5a2b12abe54f9f494b7",
+      "anchor": 458
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022200__special",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022200,
+      "replicate": 0,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 707,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022200/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "e76bb8b2ace58f48e4e731d4968faa30cff620662aacc838bae81ccbca9968cb",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 439,
+            "route": [
+              "102454134#0",
+              "102640432#0",
+              "102640432#3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "3c6e99a85323a88655e551cd293259d5757ca08de261f4130bc3b400e93e5b8e",
+      "anchor": 439
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022200__both",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022200,
+      "replicate": 0,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 707,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022200/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "e76bb8b2ace58f48e4e731d4968faa30cff620662aacc838bae81ccbca9968cb",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "1200878753#0",
+            "lane_index": 2,
+            "position": 26.86,
+            "depart_time": 439,
+            "duration": 204
+          }
+        ],
+        [
+          {
+            "id": "fixture_fire_engine",
+            "type": "fire_engine",
+            "depart_time": 458,
+            "route": [
+              "102454134#0",
+              "102640432#0",
+              "102640432#3"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "96caf6ad0d5ee8ce1d7effb036a86848984bee1b03f746134d972133f37c7338",
+      "anchor": 458
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022201__none",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022201,
+      "replicate": 1,
+      "condition": "none",
+      "horizon": 1000,
+      "vehicles": 679,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022201/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "06de070f53239c7daae9a59d260782b6cf0285711b2239c943ffc82b75b82f36",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        []
+      ],
+      "event_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726",
+      "anchor": 445
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022201__accident",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022201,
+      "replicate": 1,
+      "condition": "accident",
+      "horizon": 1000,
+      "vehicles": 679,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022201/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "06de070f53239c7daae9a59d260782b6cf0285711b2239c943ffc82b75b82f36",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "30658263#0",
+            "lane_index": 2,
+            "position": 69.17,
+            "depart_time": 445,
+            "duration": 135
+          }
+        ],
+        []
+      ],
+      "event_sha256": "ebec0bc64ae93a106c62ca4fa156a2b768b842cddab45d13e93ed5733bc7ce25",
+      "anchor": 458
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022201__special",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022201,
+      "replicate": 1,
+      "condition": "special",
+      "horizon": 1000,
+      "vehicles": 679,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022201/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "06de070f53239c7daae9a59d260782b6cf0285711b2239c943ffc82b75b82f36",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 445,
+            "route": [
+              "1200878753#0",
+              "102640412#0",
+              "102640412#0.25",
+              "102640412#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "13475ad81dddfd35d0d06c1e0f0e47cb250c0f2ac95ee3f1fafedd909afc714c",
+      "anchor": 445
+    },
+    {
+      "id": "Hongkong_YMT__normal__high_density__s731022201__both",
+      "junction": "Hongkong_YMT",
+      "network": "normal",
+      "environment": "normal_high_density",
+      "demand": "high_density",
+      "seed": 731022201,
+      "replicate": 1,
+      "condition": "both",
+      "horizon": 1000,
+      "vehicles": 679,
+      "route": "/root/zzy/JevTraffic/records/jev-module-study/fixtures/module-study/routes/Hongkong_YMT__normal__high_density__s731022201/Hongkong_YMT_normal_day021.rou.xml",
+      "route_sha256": "06de070f53239c7daae9a59d260782b6cf0285711b2239c943ffc82b75b82f36",
+      "network_sha256": [
+        "135d93290c22a62fc03b81f60be0f76a043194b5f65c09ba691d86f3f7e9cf8b",
+        "cacd5ce355f614486e6cf1f9c47fe82189fa205a5f124d65fdc68f7e53961bc0",
+        "b7db2d6e92655822a9b4c0e360a82e1411dc7ba47d88ca770c5f72b72c969207",
+        "640552a0aa6d8739488c215f7d5a64bea59694e07b1d9bdfde0f713422ed938e"
+      ],
+      "events": [
+        [
+          {
+            "id": "fixture_barrier",
+            "type": "barrier",
+            "edge_id": "30658263#0",
+            "lane_index": 2,
+            "position": 76.79,
+            "depart_time": 445,
+            "duration": 276
+          }
+        ],
+        [
+          {
+            "id": "fixture_police",
+            "type": "police",
+            "depart_time": 458,
+            "route": [
+              "1200878753#0",
+              "102640412#0",
+              "102640412#0.25",
+              "102640412#2"
+            ]
+          }
+        ]
+      ],
+      "event_sha256": "de9971ff557c8622b6073d4362c7a13d277ea89d1882009dc0123ee8ffedbcc1",
+      "anchor": 458
+    }
+  ],
+  "sensitivity_indices": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11,
+    16,
+    17,
+    18,
+    19,
+    24,
+    25,
+    26,
+    27,
+    32,
+    33,
+    34,
+    35,
+    40,
+    41,
+    42,
+    43,
+    48,
+    49,
+    50,
+    51,
+    56,
+    57,
+    58,
+    59,
+    64,
+    65,
+    66,
+    67,
+    72,
+    73,
+    74,
+    75,
+    80,
+    81,
+    82,
+    83,
+    88,
+    89,
+    90,
+    91
+  ],
+  "ablations": [
+    "no_event_response",
+    "no_case",
+    "no_temporal_prompt",
+    "rules_for_events"
+  ],
+  "sweeps": {
+    "min_similarity": [
+      0.45,
+      0.6,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "half_life_days": [
+      2,
+      4,
+      7,
+      14,
+      28
+    ],
+    "min_days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "defaults": {
+    "min_similarity": 0.75,
+    "half_life_days": 7,
+    "min_days": 2
+  },
+  "window_seconds": 60,
+  "archive_sha256": {
+    "France_Massy/easy/next_or_not/cases-v1.sqlite": "606b736dfa5d3a49db2f63a01e73361b25d57cbc01a46cd8616341e52fab9b68",
+    "France_Massy/normal/next_or_not/cases-v1.sqlite": "7b7d6a4cfb1fc3cb25a34e9ac23284fea3de9baadadd22321895abd4f47d302c",
+    "SouthKorea_Songdo/easy/next_or_not/cases-v1.sqlite": "cc134f76c35f108c4790f0d4d9f17d4ddaf318067a54fe9feaf44c337071ed8e",
+    "SouthKorea_Songdo/normal/next_or_not/cases-v1.sqlite": "518a5fbaca98cdc5a4b1cd266e86a8e3bb4b9c758c7b875b41cdd8d1bd40d174",
+    "Hongkong_YMT/easy/next_or_not/cases-v1.sqlite": "5098eeb3f1ca014f0abda3736ff115c5992d312fd20350c6105ce7d387c80d3f",
+    "Hongkong_YMT/normal/next_or_not/cases-v1.sqlite": "8087b13a8c12970af0bef53052ecffe74b51119e847d1b7cb9d62ef9ffb729d5"
+  },
+  "manifest_sha256": "0e0c9ed391fed176e08ce2688be32a8517a327142208edde2441d3ec11bcf04e",
+  "weights_sha256": "a6a2acd3f7549ebf7c588144a4e3e811ce93181ff708cfaeb563bae639f72315",
+  "runner_sha256": "8d0053dc2fe6156d86835646a08819442ea529b26788f41315199f385acf37eb",
+  "source_sha256": {
+    "jevtraffic/case_memory.py": "b14c70f8d67e3b33757b22368b01a7ddf73a7809e074c20cb436b19f6c8232fd",
+    "jevtraffic/memory.py": "87641d5d18ed76e5b736c269ff12ca291327110d17a2ea96feb97ae4f63499d8",
+    "jevtraffic/events.py": "20b8275eb775449ecfce861dbc1c622359f17acaf1b4066d51a71a08ea7d4e54",
+    "jevtraffic/sumo_agents.py": "54a58f584e3e1dc09f69c139198248907f68a7eff4d025d80dc7ee50060d5911",
+    "jevtraffic/sumo_env.py": "666deaf9441ff624b53c119a5fb767e443cc148365ab77ad3fc8c35185731a9a",
+    "jevtraffic/sumo_prompts.py": "087c50b6f093bfa0c2ac3460ba7210b6dbbea3fd1ac23d46dd513bfc8443d96c"
+  },
+  "parent_replay_sha256": "4102e48df0fa1a5e60746a8a47a6c185e3ad980eb172758a2f2535b9a2bdaed1"
+}

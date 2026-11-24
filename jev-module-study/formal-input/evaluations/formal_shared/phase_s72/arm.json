@@ -1,0 +1,6 @@
+{
+  "kind": "phase_ppo",
+  "checkpoint": "/root/zzy/JevTraffic/records/rl-next-3h/runs/high/phase32_mild/s72/model.zip",
+  "shared_event_plan": true,
+  "detector": "none"
+}

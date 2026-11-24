@@ -1,0 +1,9 @@
+{
+  "kind": "jev",
+  "adapters": [
+    "/root/zzy/JevTraffic/ckpt/unitsa-jev-0.5B-full"
+  ],
+  "engine": "original",
+  "memory": "pr",
+  "detector": "jev"
+}

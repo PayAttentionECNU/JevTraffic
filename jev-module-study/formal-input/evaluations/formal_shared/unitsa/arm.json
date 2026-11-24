@@ -1,0 +1,6 @@
+{
+  "kind": "unitsa",
+  "checkpoint": "/root/zzy/JevTraffic/ckpt/unitsa/universal/model.zip",
+  "shared_event_plan": true,
+  "detector": "none"
+}
