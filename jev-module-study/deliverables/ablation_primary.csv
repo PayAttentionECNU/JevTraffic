@@ -1,0 +1,5 @@
+ablation,condition,metric,before,after,paired_episodes,mean,lo,hi,routes
+no_event_response,priority_pooled,priority_loss,15.576875,26.858958333333334,48,11.282083333333333,6.610191587248241,15.953975079418424,24
+no_case,all,ordinary_att,48.10607766113526,48.8599104963548,96,0.7538328352195424,0.10802800195574525,1.3996376684833396,24
+no_temporal_prompt,priority_pooled,priority_loss,15.576875,15.576875,48,0.0,0.0,0.0,24
+rules_for_events,priority_pooled,priority_loss,15.576875,15.576875,48,0.0,0.0,0.0,24
